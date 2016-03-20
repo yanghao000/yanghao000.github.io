@@ -48,6 +48,7 @@ html,body{height:100%}
 .two figcaption{height:30px; line-height: 30px;}
 .skillBox{margin-top:30px; margin-bottom:10px; height:0; overflow: hidden; cursor: pointer;}
 .skillBox p{font-size: 18px;}
+mark{color:red;background: transparent;}
 /*.skillBox1{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}
 .skillBox2{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}
 .skillBox3{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}
