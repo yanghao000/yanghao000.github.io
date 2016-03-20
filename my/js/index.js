@@ -285,7 +285,7 @@ function worksSlide(){
 		}else if(objLeft==-2*liWid){
 			window.open("http://yanghao000.github.io/code/index.html","_self");
 		}else if(objLeft==-3*liWid){
-			window.open("http://yanghao000.github.io/zXiu2/index.html","_self");
+			window.open("http://yanghao000.github.io/zXiu2/index3.html","_self");
 		}
 	}
 	function changeWord(obj){    //改项目名字
