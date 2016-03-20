@@ -242,8 +242,8 @@ function worksSlide(){
 	var L = $(".slideBoxL");
 	var R = $(".slideBoxR");
 	$(".slideBox").swipe({
-		swipeLeft:function(){
-			$(this).parent().attr("onclick","")
+		swipeLeft:function(distance){
+			console.log(distance);
 			if(flag){
 				flag = false;
 				var Cleft = parseInt(C.css("left"));
@@ -283,9 +283,9 @@ function worksSlide(){
 		if(objLeft==-liWid){
 			window.open("http://yanghao000.github.io/zXiu/index.html","_self");
 		}else if(objLeft==-2*liWid){
-			window.open("http://www.baidu.com","_self");
+			window.open("http://yanghao000.github.io/code/index.html","_self");
 		}else if(objLeft==-3*liWid){
-			window.open("http://www.lechange.com","_self");
+			window.open("http://yanghao000.github.io/zXiu2/index.html","_self");
 		}
 	}
 	function changeWord(obj){    //改项目名字
