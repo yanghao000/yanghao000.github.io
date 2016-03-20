@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐橙首页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1"/>
+    <link rel="stylesheet" href="css/com.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/rem.js"></script>
+    <style>
+        .slide{position: relative; height:1.6rem; margin-bottom:0.15rem;overflow: hidden;}
+        .imgBox{height:1.6rem; width:6.4rem; position: absolute;}
+        .imgBox img{width:3.2rem; height:1.6rem; display: block; float:left;}
+        .btnBox{position: absolute; left:50%; margin-left:-.22rem; bottom:.1rem;}
+        .btnBox li{width:.12rem; height:.12rem; background: gray; float:left; margin:0 0.03rem;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            border-radius:50%;}
+        .btnBox .active{background:#ff6500; }
+
+        .halfBox{font-size:0.14rem; height:1.3rem; padding:0 0.1rem;
+            display: flex; justify-content: space-between;
+        }
+        .innerBox{width:1.4rem; height:1.3rem; position: relative; text-align: center; background: #fff;}
+        .floatBlock{width:0.5rem; height:0.2rem; text-align: center; line-height: 0.2rem;
+        color:#fff; background: dodgerblue; position: absolute; top:-0.05rem;}
+        .word > p:nth-child(1){font-size:0.1rem; padding-top:0.15rem;}
+        .word > p:nth-child(2){font-size:0.1rem; color:red; line-height: 0.2rem;}
+        .word > p:nth-child(3){font-size:0.1rem; color:gray; margin-bottom:0.05rem;}
+        .halfBox img{width:0.55rem; height:0.56rem;}
+        @media screen and (max-width:374px) {
+            .word > p:nth-child(2){font-size:0.1rem; color:red; line-height: 0.1rem;}
+        }
+
+        .longBox{font-size:0.14rem; padding:0 0.1rem; height:0.84rem; margin-top:0.1rem;}
+        .longBox a{width:100%;}
+        #inBox{width:100%; height:0.84rem; position: relative;}
+        #inBox img{width:0.55rem; height:0.56rem; position: absolute; left:0.6rem; top:0.15rem;}
+        #word{width:1.4rem; position: absolute; right:0rem;}
+
+        footer{font-size: 0.12rem; display: flex; padding: 0 0.1rem; justify-content: space-between;
+        margin-top:0.2rem; margin-bottom:0.1rem;}
+        footer img{width:0.93rem; height:0.63rem;}
+        .news{text-align: center; background: #fff;}
+        .news p{color:orange; font-weight: 600; line-height: 0.32rem;}
+    </style>
+</head>
+<body>
+<header>
+    <a href=""><img src="img/logo.png" alt="乐橙"></a>
+    <nav>
+        <ul>
+            <li><a class="navAct" href="#">首页</a></li>
+            <li><a href="product.html">产品</a></li>
+            <li><a href="zixun.html">资讯</a></li>
+            <li><a href="lianxi.html">联系我们</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="slide">
+    <div class="imgBox">
+        <a href=""><img src="img/slide1.jpg" alt="轮播图1"></a>
+        <a href=""><img src="img/slide2.jpg" alt="轮播图2"></a>
+    </div>
+    <ul class="btnBox">
+        <li class="active"></li>
+        <li></li>
+    </ul>
+</div>
+<div class="halfBox">
+    <a href="">
+        <div class="innerBox">
+            <div class="floatBlock">TP1</div>
+            <div class="word">
+                <p>大眼仔TP1</p>
+                <p>￥299</p>
+                <p>远程智能转换,360度无死角</p>
+            </div>
+
+            <img src="img/1.png" alt="">
+        </div>
+    </a>
+    <a href="">
+        <div class="innerBox">
+            <div class="floatBlock">TK1</div>
+            <div class="word">
+                <p>方掌柜TK1</p>
+                <p>￥269</p>
+                <p>自带广角，看店利器</p>
+            </div>
+
+            <img src="img/2.png" alt="">
+        </div>
+    </a>
+</div>
+<div class="longBox">
+    <a href="">
+        <div class="innerBox" id="inBox">
+            <div class="floatBlock">TC1</div>
+            <div class="word" id="word">
+                <p>小豆包TC1</p>
+                <p>￥269</p>
+                <p>自带广角，看店利器</p>
+            </div>
+            <img src="img/3.png" alt="">
+        </div>
+    </a>
+</div>
+<footer>
+    <a href="#">
+        <div class="news">
+            <img src="img/news.png" alt="">
+            <p>关于我们</p>
+        </div>
+    </a>
+    <a href="#">
+        <div class="news">
+            <img src="img/news.png" alt="">
+            <p>关于我们</p>
+        </div>
+    </a>
+    <a href="#">
+        <div class="news noMar ">
+            <img src="img/news.png" alt="">
+            <p>关于我们</p>
+        </div>
+    </a>
+</footer>
+<script>
+    $(function(){
+        var imgBox = $(".imgBox");
+        var oBtn = $(".btnBox li");
+        var index = 0;
+        var timer = setInterval(slide,7000);
+        function slide(){
+            index++;
+            if(index>=oBtn.length){
+                index=0;
+            }
+            change();
+        }
+        function change(){
+            imgBox.stop().animate({"left":-index*3.2+"rem"},1000);
+            oBtn.eq(index).css("background","#ff6500").siblings().css("background","gray");
+        }
+        oBtn.each(function(){
+            $(this).click(function(){
+                index=$(this).index();
+                change();
+            });
+        });
+    });
+</script>
+</body>
+</html>

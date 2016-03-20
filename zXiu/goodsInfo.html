@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/zxiu.css" />
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/ajaxRec.js" ></script>
+		<script src="js/zxiu.js"></script>
+		<script src="js/goodsInfo.js"></script>
+		<style>
+			header > img:nth-child(1){visibility: visible;}
+			.header-btn{visibility: visible;}	
+			
+			html,body { height: 100%; overflow: hidden; padding-bottom:0;}
+			.outer { height: 100%; padding-top: 0.87rem; box-sizing: border-box ; overflow: hidden; }
+			header { height: 0.87rem; margin-top: -0.87rem;}
+			.outer .yiye{height: 90%;width:100%;}
+			
+			.leftTime{height:0.9rem;line-height: 0.9rem; background: #333; color:#fff; font-size:0.3rem;
+			text-align: center;}
+			.info img{width:4.39rem; height:3.68rem; display: block;margin:0 auto;border:1px solid #999;
+			margin-bottom:0.52rem; margin-top:0.3rem;}
+			.infoTitle{width:4.64rem; height:0.8rem; background: linear-gradient(#f65e87,#d7114f);
+			color:#fff; font-size:0.36rem; line-height: 0.8rem; text-indent: 0.3rem;}
+			.infoTitle span{margin-right:0.3rem;}
+			.info p{font-size:0.3rem; padding:0.3rem 0.6rem;}
+			.info p span:nth-child(3){float:right;}
+			.info p span:nth-child(2){margin-left:0.37rem;}
+			.info p span:nth-child(1) i{text-decoration: line-through;}
+			
+			.infoTitleOut{margin-left:0.9rem;}
+			
+			.details img{width:100%; height:3.25rem;}
+			.details .word{font-size:0.26rem;}
+			.word p{padding:0.3rem 0.3rem; font-size:0.3rem;}
+			
+			.intro{background: #fff; display: block;}
+			.details{display: none; background: #fff;}
+			.photo{display: block; overflow: hidden; background: dodgerblue;}
+			
+			#slide .swiper-container{height:100%;}
+			#slide .swiper-pagination-bullet{background: #fff; opacity: 1; border:1px solid #000;
+			margin:0.3rem 0.1rem; width:0.2rem; height:0.2rem;}
+			#slide .swiper-pagination-bullet-active{background: #d50e13;}
+			/*.slide .swiper-slide{width:100%; height:100%;overflow: hidden;}*/
+			#slide img{width:100%;}
+			
+			.foot{font-size:0.36rem; color:#fff;width:100%; position:fixed; bottom:0; z-index: 99;}
+			.foot li{height:1.1rem; width:33.3%; background: linear-gradient(#6d6c73,#3a3a40); 			float: left; box-sizing: border-box;position: relative;}
+			.foot li span{position: absolute; left:0; right:0; margin:0 auto; width:1rem; 
+			text-align: center; bottom:0.25rem;}
+			.foot .active{border-top:5px solid #e43669;}
+		</style>
+	</head>
+	<body>
+		<div class="outer">
+			<header>
+				<img class="back" src="img/img-icon/fanhui.png"/>
+				<span><a href="">商品介绍</a></span>
+				<div class="header-btn">分享</div>
+			</header>
+			
+			<div class="intro yiye">
+				<div class="leftTime">
+					距离结束时间:<i>00</i>天<i>00</i>时<i>00</i>分<i>00</i>秒
+				</div>
+				<!--<div class="info">
+					<a href=""><img src="img/img-icon/介绍-商品图.jpg"/></a>
+					<div class="infoTitleOut">
+						<div class="trigon"></div>
+						<div class="infoTitle">
+							￥<span>235</span>灰色印花短袖T恤
+						</div>
+					</div>
+					
+					<p>市场价: <span>￥<i>139</i></span><span><i>4.8</i>折</span><span><i>125</i>人购买</span></p>
+				</div>-->
+			</div>
+			
+			<div class="details yiye">
+				<!--<img src="img/img-icon/详情-图片.jpg"/>-->
+				<div class="word">
+					<p></p>
+				</div>
+			</div>
+			
+			<div class="photo yiye">
+			<section class="slide" id="slide">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							
+						</div>
+						<div class="swiper-slide">
+							
+						</div>
+						<div class="swiper-slide">
+							
+						</div>
+						<div class="swiper-slide">
+							
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+			</div>
+		</div>	
+		<div class="foot">
+			<ul>
+				<li class="active"><span>介绍</span></li>
+				<li><span>详情</span></li>
+				<li><span>实拍</span></li>
+			</ul>
+		</div>
+		<script>
+		</script>
+	</body>
+</html>

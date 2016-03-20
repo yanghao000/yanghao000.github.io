@@ -1,0 +1,14 @@
+#backTop {
+  position: fixed;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  right: 0.1rem;
+  bottom: 0.1rem;
+  line-height: 0.4rem;
+  text-align: center;
+  font-size: 0.2rem;
+  color: #fff;
+  display: none;
+}

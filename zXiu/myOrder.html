@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/zxiu.css" />
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/ajaxRec.js" ></script>
+		<script src="js/zxiu.js"></script>
+		<script src="js/yuan.js"></script>
+		<style>
+			body{font-weight: 900; font-family: "微软雅黑";}
+			header > img:nth-child(1){visibility: visible;}
+			/*.header-btn{visibility: visible;}*/	
+			
+			.hadGood{height:2.3rem; font-size:0.28rem;border-bottom:1px solid #999;}
+			.hadGood > a img{width:1.73rem; height:1.73rem; margin:0.27rem 0.24rem 0 0.33rem; float:left;}
+			.hadGoodInfo{width:3.85rem; height:1.73rem;float: left; margin-top:0.27rem; position:relative;}
+			.hadGoodInfo img{width:0.26rem; height:0.32rem; position: absolute; right:0; top:0.04rem;}
+			.hadGoodInfo p{line-height: 0.42rem;}
+			.hadGoodInfo p:nth-of-type(1){width:2.85rem;}
+			.hadGoodInfo p:nth-of-type(2) span{color:#e63569;}
+			.hadGoodInfo p:nth-of-type(2) em{float:right;}
+			.hadGoodInfo p:nth-of-type(3) i{width:0.57rem; height:0.42rem; border-radius: 0.1rem;
+			font-size:0.3rem; line-height: 0.42rem; display:inline-block; text-align: center;
+			background: linear-gradient(#ababab,#4d4d4d); color: #fff; font-weight: bold;}
+			.hadGoodInfo .cencal{width:1.39rem; height:0.55rem; font-siza:0.24rem; color:#fff; border-radius: 0.2rem;
+			background: linear-gradient(#f65e87,#d7114f); position: absolute; right:0; bottom:0;
+			line-height:0.55rem; text-align: center;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="myOrder">
+		<header>
+			<img src="img/img-icon/fanhui.png"/>
+			<span><a href="">我的订单</a></span>
+			<div class="header-btn">去结算</div>
+		</header>
+		<div class="shopping">	
+			<section class="hadGood">
+				<a href=""><img src="img/img-icon/gouwuchetupian.jpg"/></a>
+				<div class="hadGoodInfo">
+					<img src="img/img-icon/shanchu.png"/>
+					<p>ESPRIT 气质V领玫红T恤</p>
+					<p>单价：<span>￥199</span><em>L</em></p>
+					<p>数量：<span>1</span></p>
+					<div class="cencal">取消订单</div>
+				</div>
+				
+			</section>
+		</div>
+		<footer class="footer">
+			<ul>
+				<a href="index.html"><li><img src="img/img-icon/shouye.png"/><span>首页</span></li></a>
+				<a href="classify.html"><li><img src="img/img-icon/fenlei.png"/><span>分类</span></li></a>
+				<a href="shoppingCar.html"><li><img src="img/img-icon/gouwuche.png"/><span>购物车</span><p class="yuan"></p></li></a>
+				<a href="myXiu.html"><li class="active"><img src="img/img-icon/wodexiu.png"/><span>我的秀</span></li></a>
+				<a href="more.html"><li><img src="img/img-icon/gengduo.png"/><span>更多</span></li></a>
+			</ul>
+		</footer>
+		</div>
+		<script>
+			$(function(){
+				$("header img").click(function(){
+					window.location.href = "myXiu.html";
+				});
+			})
+		</script>
+	</body>
+</html>
+	 

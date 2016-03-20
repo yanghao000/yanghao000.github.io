@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/zxiu.css" />
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/ajaxRec.js" ></script>
+		<script src="js/zxiu.js"></script>
+		<script src="js/myDiscount.js"></script>
+		<script src="js/yuan.js"></script>
+		<style>
+			body{font-weight: 900; font-family: "微软雅黑";}
+			header > img:nth-child(1){visibility: visible;}
+			/*.header-btn{visibility: visible;}*/	
+			
+			.Discount{padding:0 0.56rem; font-size:0.3rem;}
+			.discountClass ul{overflow: hidden; border:1px solid #999; border-radius: 0.2rem;
+			margin:0.3rem 0;}
+			.discountClass li{float:left; color:#000; background: linear-gradient(#f5f5f5,#c6c6c6);
+			width:25%; text-align: center; height:0.64rem; line-height: 0.64rem;
+			border-right:1px solid #999; box-sizing: border-box;}
+			.discountClass .nobor{border-right:none;}
+			.discountClass .active{background: linear-gradient(#f65e87,#d7114f); color:#fff;}
+			.discountBox{border:1px solid #999; border-radius: 0.2rem; margin-bottom:0.2rem;}
+			.discountBox p{line-height: 0.44rem; text-indent: 0.1rem;}
+			.discountBox p span{color:#999;}
+			.discountNum{position: relative;}
+			.disBox{position: absolute; width:100%;}
+			.hasUse,.hasOutTime,.noActive{display: none;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="myDiscount">
+		<header>
+			<img src="img/img-icon/fanhui.png"/>
+			<span><a href="">我的优惠券</a></span>
+			<div class="header-btn">去结算</div>
+		</header>
+		
+		<section class="Discount">
+			<div class="discountClass">
+				<ul>
+					<li class="active">未使用</li>
+					<li>已使用</li>
+					<li>未激活</li>
+					<li class="nobor">已过期</li>
+				</ul>	
+			</div>
+			<div class="discountNum">
+				<div class="noUse disBox">
+					<div class="discountBox">
+						<p>430元现金券（满299元可用）</p>
+						<p>号码:<span>SADWAD</span></p>
+						<p>过期时间:<span>2016年1月1日</span></p>
+						<p>状态:<span>未使用</span></p>
+					</div>
+				</div>
+				<div class="hasUse disBox">
+					<div class="discountBox">
+						<p>40元现金券（满299元可用）</p>
+						<p>号码:<span>ASDDFSADGFSAF</span></p>
+						<p>过期时间:<span>2016年1月1日</span></p>
+						<p>状态:<span>已使用</span></p>
+					</div>
+				</div>
+				<div class="noActive disBox">
+					<div class="discountBox">
+						<p>1200元现金券（满299元可用）</p>
+						<p>号码:<span>AAASSADGFSAF</span></p>
+						<p>过期时间:<span>2016年1月1日</span></p>
+						<p>状态:<span>为激活</span></p>
+					</div>
+				</div>
+				<div class="hasOutTime disBox">
+					<div class="discountBox">
+						<p>40元现金券（满299元可用）</p>
+						<p>号码:<span>ASDDFSADGFSAF</span></p>
+						<p>过期时间:<span>2016年1月1日</span></p>
+						<p>状态:<span>已过期</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<footer class="footer">
+			<ul>
+				<a href="index.html"><li><img src="img/img-icon/shouye.png"/><span>首页</span></li></a>
+				<a href="classify.html"><li><img src="img/img-icon/fenlei.png"/><span>分类</span></li></a>
+				<a href="shoppingCar.html"><li><img src="img/img-icon/gouwuche.png"/><span>购物车</span><p class="yuan"></p></li></a>
+				<a href="myXiu.html"><li class="active"><img src="img/img-icon/wodexiu.png"/><span>我的秀</span></li></a>
+				<a href="more.html"><li><img src="img/img-icon/gengduo.png"/><span>更多</span></li></a>
+			</ul>
+		</footer>
+		</div>
+		<script>
+			$(function(){
+				$("header img").click(function(){
+					window.location.href = "myXiu.html";
+				});
+			})
+		</script>
+	</body>
+</html>
+	 

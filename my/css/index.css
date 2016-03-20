@@ -1,0 +1,116 @@
+*{margin:0; padding:0;}
+body{font-family: "微软雅黑"; font-weight: bold;}
+i,em{font-style: normal;}
+ul li{list-style: none;}
+a{text-decoration: none;}
+
+/*头部*/
+.header{position: fixed;top:0;width:100%;z-index: 10; background: rgba(50,50,50,0.7); border:none;}
+.navbar-brand{height:70px; padding:0; min-width:70px; width:auto; overflow:hidden}
+.navbar-brand img{width:70px; height:70px; border-radius: 50%; display: block; float:left;}
+.brand-word{float:right; height:70px;}
+.brand-word p{color:#ddd;height:35px; line-height: 35px;text-align: center; margin:0; padding:0 10px; margin-left:15px;overflow: hidden;position: relative;width:92px;}
+.brand-word p:nth-child(1){ border-bottom: 2px solid #ccc; box-sizing: border-box;}
+.brand-word p span{display: block; position: absolute;right:0;left:0;margin:0 auto;top:0;}
+.brand-word p i{display: block; position: absolute;right:0;left:0;margin:0 auto;bottom:-35px;}
+.navbar-default .nav li a{height:70px; line-height: 70px; padding:0 10px; font-size: 18px;color:#bbb;}
+.navbar-default .nav li a:hover{color:#eee;}
+.nav li{position: relative; margin:0 auto;}
+.right-slide{position: absolute; bottom:0;right:46px;left:46px; height:3px; width:0px; background: deepskyblue;margin:0 auto;}
+.navbar-default .navbar-toggle{margin-top:18px; background: #ddd;}
+/*.navbar-default .navbar-toggle:hover{background: deepskyblue;}*/
+.in li{width:92px; margin:0 auto;}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{color:#ccc;}
+/*第一页*/
+html,body{height:100%}
+.swiper-container{width:100%;height:100%;}
+.swiper-slide{background: url(../img/bg1.jpg) no-repeat;background-size: 100% 100%;padding-top:80px;color:#ddd;box-sizing: border-box;}
+.one{animation: bg 2s;-webkit-animation: bg 2s;}
+.title h1{position: relative; height:40px;width:200px;margin:0 auto;text-align: center;margin-bottom:20px; padding-top:5px;}
+.title h1 .titleBefore, .title h1 .titleAfter{ position: absolute; }
+/*.title h1 .titleBefore{width:45px; height:45px; border-left:3px solid #ddd;border-top:3px solid #ddd;top:-5px;animation: titleLeft 1.1s;}*/
+/*.title h1 .titleAfter{width:45px;height:45px;border-bottom:3px solid #ddd;border-right:3px solid #ddd;bottom:-5px;right:0; animation: titleRight 1.1s;}*/
+.inforBox{text-align: center;}
+.infor{font-size:18px;display: inline-block;padding:10px 10px; margin:10px 0;position: relative;}
+.infor1{animation: infor 3s linear 1s infinite alternate;-webkit-animation: infor 3s linear 1s infinite alternate;}
+.infor2{animation: infor 2.2s linear 1s infinite alternate;-webkit-animation: infor 2.2s linear 1s infinite alternate;}
+.infor3{animation: infor 2.6s linear 1s infinite alternate;-webkit-animation: infor 2.6s linear 1s infinite alternate;}
+.infor4{animation: infor 2.4s linear 1s infinite alternate;-webkit-animation: infor 2.4s linear 1s infinite alternate;}
+.infor5{animation: infor 2.8s linear 1s infinite alternate;-webkit-animation: infor 2.8s linear 1s infinite alternate;}
+/*第二页*/
+/*.two{padding-top:80px;color:#ddd;background: url(../img/bg1.jpg) no-repeat; background-size: cover;}*/
+.over .container{height:100%; overflow-y: auto; }
+.imgOut{width:100px; height:100px;border-radius: 20px; overflow: hidden;margin:0 auto;}
+.imgOut img{width:100px; height:100px; cursor: pointer;}
+/*.imgOut:hover img{width:120px;height:120px;}*/
+.two figure{text-align: center; position: relative;}
+.skillRow{margin-top:80px;}
+.two figcaption{height:30px; line-height: 30px;}
+.skillBox{margin-top:30px; margin-bottom:10px; height:0; overflow: hidden; cursor: pointer;}
+.skillBox p{font-size: 18px;}
+/*.skillBox1{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}
+.skillBox2{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}
+.skillBox3{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}
+.skillBox4{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}*/
+/*第三页*/
+
+@media only screen and (max-width: 768px) {    
+	.swiper-slide{background-position: -500px;background-size: cover;}
+	.one{animation: bgSmall 2s;-webkit-animation: bgSmall 2s;}
+	.two{background-position: -200px;}
+	.navbar-default .nav li a{height:50px; line-height: 50px;}
+	.skillRow{margin-top:10px;}
+	.job{background: url(../img/cloud.png); background-size: 100% 100%; height:60px;margin:0 auto;position: relative;}
+	.job div{text-align: center;color:purple; font-size:20px;height:28px;position: absolute;left:0;right:0;margin:auto;bottom:0;top:0}
+	.job div span{border-radius: 10px;background: mediumpurple;padding:0 10px;position: relative;}
+	/*.job span::before,.job span::after{position: absolute;color:mediumpurple;top:-26px;height:30px;}
+	.job span::before{content: "|";left:30%;}
+	.job span::after{content: "|";right:30%;}*/
+	.job1{-webkit-animation: job 4s 2.0s infinite;z-index: 1005;}
+	.job2{-webkit-animation: job 5s 2.2s infinite;z-index: 1004;}
+	.job3{-webkit-animation: job 7s 2.4s infinite;z-index: 1003;}
+	.job4{-webkit-animation: job 4s 2.6s infinite;z-index: 1002;}
+	.job5{-webkit-animation: job 6s 2.8s infinite;z-index: 1001;}
+	.four .col-sm-0{display: none;}
+	.phoneOut{background: url(../img/shouji.png) no-repeat;background-size: 100% 100%;width:230px;height:450px;overflow: hidden;}
+	.phoneIn{background: red;width:204px; height:346px;margin:53px auto;overflow: hidden;position: relative;}
+	.slideBox{overflow: hidden;width:2000px;position: absolute;}
+	.phoneIn li{float:left;width:204px; height:346px;}
+	.phoneIn img{width:100%; height:100%;display: block;}
+	.phoneBtn{position: absolute;width:36px; height:36px;left:0;right:0;margin:0 auto; bottom:9px;border-radius: 50%;opacity: 0.6;}
+	.mask{position: absolute;width:204px;height:346px;top:346px;left:0;opacity: 0.5;background: #000;}
+	.word{position: absolute;height:60px;line-height: 60px;font-size: 30px;left:0;right:0;margin:0 auto;text-align: center;top:-60px;}
+	.workExp h3{margin-top:10px;}
+	/*.four .col-md-4{margin-bottom:20px;}*/
+	.five .col-md-6{margin-bottom:20px;}
+}
+@media only screen and (min-width: 768px) {    
+	.swiper-slide{padding-top:110px;}
+	.title h1{margin-bottom:40px}
+	.infor{height:100px; line-height: 80px;margin:30px 0;padding:10px 10px; font-size: 22px;}
+	.three .col-sm-12{margin:40px 0;}
+	.job{background: url(../img/cloud.png); background-size: 100% 100%; height:100px;margin:0 auto;position: relative;}
+	.job div{text-align: center;color:purple; font-size:20px;height:28px;position: absolute;left:0;right:0;margin:0 auto;bottom:-40px;}
+	.job div span{border-radius: 10px;background: mediumpurple;padding:0 10px;position: relative;}
+	.job span::before,.job span::after{position: absolute;color:mediumpurple;top:-26px;height:30px;}
+	.job span::before{content: "|";left:30%;}
+	.job span::after{content: "|";right:30%;}
+	.job1{animation: job 4s 2.0s infinite;top:30px;}
+	.job2{animation: job 5s 2.2s infinite;top:-20px;}
+	.job3{animation: job 7s 2.4s infinite;top:15px;}
+	.job4{animation: job 4s 2.6s infinite;top:10px;}
+	.job5{animation: job 6s 2.8s infinite;}
+	.imgOut:hover{box-shadow:0px 0px 20px #000;}
+	.phoneOut{background: url(../img/shouji.png) no-repeat;background-size: 100% 100%;width:230px;height:450px;overflow: hidden;position: relative;}
+	/*204 346*/
+	.phoneIn{background: red;width:204px; height:346px;margin:53px auto;overflow: hidden;position: relative;}
+	.slideBox{overflow: hidden;width:2000px;position: absolute;}
+	.phoneIn li{float:left;width:204px; height:346px;}
+	.phoneIn img{width:100%; height:100%;display: block;}
+	.four .row{ overflow: hidden;}
+	.phoneBtn{position: absolute;width:36px; height:36px;left:0;right:0;margin:0 auto; bottom:9px;border-radius: 50%;opacity: 0.6;}
+	.mask{position: absolute;width:204px;height:346px;top:346px;left:0;opacity: 0.5;background: #000;}
+	.word{position: absolute;height:60px;line-height: 60px;font-size: 30px;left:0;right:0;margin:0 auto;text-align: center;top:-60px;}
+	.workExp{width:70%;margin:0 auto;}
+	.five .container{overflow: hidden;}
+}

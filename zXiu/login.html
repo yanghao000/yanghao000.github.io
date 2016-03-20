@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/zxiu.css" />
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/ajaxRec.js" ></script>
+		<script src="js/zxiu.js"></script>
+		<script src="js/pop.js"></script>
+		<script src="js/login.js"></script>
+		<script src="js/yuan.js"></script>
+		<style>
+			header > img:nth-child(1){visibility: visible;}
+			.header-btn{visibility: visible;}
+			
+			
+			.loginInfo{font-size:0.26rem; padding:0.62rem 0.38rem;}
+			.loginInfo input{box-shadow: 1px 1px 2px #000 inset;}	
+			.loginInfo input[type="text"]{width:100%; height:0.8rem; border:1px solid #ccc; border-radius: 0.2rem; margin-bottom:0.53rem;font-size:0.4rem; text-indent: 0.2rem;}	
+			.loginInfo input[type="password"]{width:100%; height:0.8rem; border:1px solid #ccc; border-radius: 0.2rem; margin-bottom:0.53rem;font-size:0.4rem; text-indent: 0.2rem;}
+			.loginInfo input[type="checkbox"]{width:0.32rem; height:0.32rem; margin:0; margin-right:0.1rem; display: block; float: left;}
+			.loginInfo p{height:0.36rem; line-height: 0.36rem;margin-bottom:0.53rem;}	
+			.loginInfo span{margin-left:0.5rem; text-decoration: underline; color:#9d9d9d;}
+			.loginInfo i{}
+			.loginInfo input[type="button"]{width:100%; height:0.8rem; border:1px solid #ccc; border-radius: 0.2rem; font-size:0.4rem;background: linear-gradient(#f65e87,#d7114f); color:#fff;box-shadow: none;}
+		</style>
+	</head>
+	<body>
+		<div class="login">
+		<header>
+			<img src="img/img-icon/fanhui.png"/>
+			<span><a href="">登录</a></span>
+			<a href="register.html"><div class="header-btn">注册</div></a>
+		</header>
+		
+		<section class="loginInfo">
+			<form action="">
+				<input name="user" class="inputBlock" type="text" placeholder="账号"/>
+				<input name="pass" class="inputBlock" type="password" placeholder="密码"/>
+				<p><input type="checkbox" /><i>记住密码</i><span>忘记密码？</span></p>
+				<input name="login" type="button" value="登录"/>
+			</form>	
+		</section>
+		
+		<footer class="footer">
+			<ul>
+				<a href="index.html"><li><img src="img/img-icon/shouye.png"/><span>首页</span></li></a>
+				<a href="classify.html"><li><img src="img/img-icon/fenlei.png"/><span>分类</span></li></a>
+				<a href="shoppingCar.html"><li><img src="img/img-icon/gouwuche.png"/><span>购物车</span><p class="yuan"></p></li></a>
+				<a href="myXiu.html"><li class="active"><img src="img/img-icon/wodexiu.png"/><span>我的秀</span></li></a>
+				<a href="more.html"><li><img src="img/img-icon/gengduo.png"/><span>更多</span></li></a>
+			</ul>
+		</footer>
+		</div>	
+	</body>
+</html>
+	 

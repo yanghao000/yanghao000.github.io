@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/zxiu.css" />
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/ajaxRec.js" ></script>
+		<script src="js/zxiu.js"></script>
+		<script src="js/login.js"></script>
+		<script src="js/yuan.js"></script>
+		<style>
+			header > img:nth-child(1){visibility: visible;}
+			body{font-weight: 900; font-family: "微软雅黑";}
+			.admin{height:3.1rem;}
+			.touxiang{width:1.66rem; height:1.65rem; border-radius: 18%; overflow: hidden; margin-left:0.35rem; margin-top:0.62rem; float: left;}
+			.touxiang img{display: block; width:1.66rem; height:1.65rem;}
+			.adminInfo{float:left; margin-left:0.32rem; margin-top:0.9rem; font-size:0.33rem;}
+			.adminInfo p{margin-bottom:0.38rem;}
+			.adminInfo i{width:1.09rem; height:0.54rem; border-radius: 0.1rem;
+			line-height: 0.54rem; display:inline-block; text-align: center;
+			background: linear-gradient(#f7608b,#c50f48); color: #fff;}
+			.adminInfo i:nth-of-type(1){margin-right:0.43rem;}
+			
+			.adminList{width:5.6rem; font-size:0.37rem; border-radius: 5%; overflow: hidden;
+			border:1px solid #999; margin:0 auto;}
+			.adminList a{display: block; color: #000;}
+			.adminList li{height:0.9rem; line-height: 0.9rem; border-bottom:1px solid #999; box-sizing: border-box;  padding:0 0.27rem;}
+			.adminList span{float:right;}
+			.adminList .noborder{border-bottom:none;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="myXiu">
+		<header>
+			<img src="img/img-icon/fanhui.png"/>
+			<span><a href="">我的秀</a></span>
+			<div class="header-btn"></div>
+		</header>
+		
+		<section class="admin">
+			<div class="touxiang">
+				<a href=""><img src="img/img-icon/touxiang.png"/></a>
+			</div>
+			<div class="adminInfo">
+				<p>昵称:<span class="nicheng">未知</span></p>
+				<a href="login.html"><i>登录</i></a><a href="register.html"><i>注册</i></a>
+			</div>
+		</section>
+		<section class="adminList">
+			<ul>
+				<a href="myOrder.html"><li>我的订单<span>&gt;</span></li></a>
+				<a href="myDiscount.html"><li>我的优惠券<span>&gt;</span></li></a>
+				<a href="visitHistory.html"><li>浏览记录<span>&gt;</span></li></a>
+				<a href="myCollect.html"><li class="noborder">我的收藏<span>&gt;</span></li></a>
+			</ul>
+		</section>
+		
+		<footer class="footer">
+			<ul>
+				<a href="index.html"><li><img src="img/img-icon/shouye.png"/><span>首页</span></li></a>
+				<a href="classify.html"><li><img src="img/img-icon/fenlei.png"/><span>分类</span></li></a>
+				<a href="shoppingCar.html"><li><img src="img/img-icon/gouwuche.png"/><span>购物车</span><p class="yuan"></p></li></a>
+				<a href="myXiu.html"><li class="active"><img src="img/img-icon/wodexiu.png"/><span>我的秀</span></li></a>
+				<a href="more.html"><li><img src="img/img-icon/gengduo.png"/><span>更多</span></li></a>
+			</ul>
+		</footer>
+		</div>	
+	</body>
+</html>
+	 

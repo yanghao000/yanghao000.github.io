@@ -1,0 +1,11 @@
+*{margin:0; padding:0;}
+a{text-decoration: none; color:#232323;}
+ul{list-style: none;}
+body{background: #d3d4d4;}
+
+header{height:0.45rem; background: #fff; border-bottom:1px solid gray;}
+header img{width:0.46rem; height:0.21rem; display:inline-block; float:left; margin:.13rem 0 0 .1rem;}
+header ul{float:right; margin-top:.14rem;}
+header li{float:left; padding:0 .05rem;font-size: 0.14rem;}
+header li a{ font-weight: bold;}
+header .navAct{color:#ff6500;}
