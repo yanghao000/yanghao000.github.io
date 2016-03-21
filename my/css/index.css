@@ -24,7 +24,7 @@ a{text-decoration: none;}
 /*第一页*/
 html,body{height:100%}
 .swiper-container{width:100%;height:100%;}
-.swiper-slide{background: url(../img/bg1.jpg) no-repeat;background-size: 100% 100%;padding-top:80px;color:#ddd;box-sizing: border-box;}
+.swiper-slide{background: url(../img/bg1.jpg) no-repeat;background-size: 100% 100%;-webkit-background-size:100% 100%;padding-top:80px;color:#ddd;box-sizing: border-box;}
 .one{animation: bg 2s;-webkit-animation: bg 2s;}
 .title h1{position: relative; height:40px;width:200px;margin:0 auto;text-align: center;margin-bottom:20px; padding-top:5px;}
 .title h1 .titleBefore, .title h1 .titleAfter{ position: absolute; }
@@ -54,26 +54,31 @@ mark{color:red;background: transparent;}
 .skillBox3{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}
 .skillBox4{-webkit-animation: slideDowna 0.5s 3s;animation: slideDowna 0.5s 3s;}*/
 /*第三页*/
-
+.phoneMiddle{position: relative;}
+.tips{font-size:20px;color:#ddd;position: absolute;z-index: 99;}
+.phoneMiddle .tips:nth-of-type(2){width:30px;height:30px;left:25px;top:0;bottom:0;margin:auto 0;transform: rotate(-90deg);animation: tipsL 2s 2s infinite;-webkit-animation: tipsL 2s 2s infinite;}
+.phoneMiddle .tips:nth-of-type(3){width:30px;height:30px;right:25px;top:0;bottom:0;margin:auto 0;transform: rotate(90deg);animation: tipsR 2s 2s infinite;-webkit-animation: tipsR 2s 2s infinite;}
+.tips img{width:30px;height:30px;}
+.phoneBtn{font-size: 12px;line-height: 36px;text-align: center;color:#000;}
 @media only screen and (max-width: 768px) {    
-	.swiper-slide{background-position: -500px;background-size: cover;}
+	.swiper-slide{background-position: -500px;background-size: cover;-webkit-background-size:cover;}
 	.one{animation: bgSmall 2s;-webkit-animation: bgSmall 2s;}
 	.two{background-position: -200px;}
 	.navbar-default .nav li a{height:50px; line-height: 50px;}
 	.skillRow{margin-top:10px;}
-	.job{background: url(../img/cloud.png); background-size: 100% 100%; height:60px;margin:0 auto;position: relative;}
+	.job{background: url(../img/cloud.png); background-size: 100% 100%;-webkit-background-size:100%100%; height:60px;margin:0 auto;position: relative;}
 	.job div{text-align: center;color:purple; font-size:20px;height:28px;position: absolute;left:0;right:0;margin:auto;bottom:0;top:0}
 	.job div span{border-radius: 10px;background: mediumpurple;padding:0 10px;position: relative;}
 	/*.job span::before,.job span::after{position: absolute;color:mediumpurple;top:-26px;height:30px;}
 	.job span::before{content: "|";left:30%;}
 	.job span::after{content: "|";right:30%;}*/
-	.job1{-webkit-animation: job 4s 2.0s infinite;z-index: 1005;}
-	.job2{-webkit-animation: job 5s 2.2s infinite;z-index: 1004;}
-	.job3{-webkit-animation: job 7s 2.4s infinite;z-index: 1003;}
-	.job4{-webkit-animation: job 4s 2.6s infinite;z-index: 1002;}
-	.job5{-webkit-animation: job 6s 2.8s infinite;z-index: 1001;}
+	.job1{-webkit-animation: job 4s 2.0s infinite;z-index: 1005;animation: job 4s 2.0s infinite;z-index: 1005;}
+	.job2{-webkit-animation: job 5s 2.2s infinite;z-index: 1004;animation: job 5s 2.2s infinite;z-index: 1004;}
+	.job3{-webkit-animation: job 7s 2.4s infinite;z-index: 1003;animation: job 7s 2.4s infinite;z-index: 1003;}
+	.job4{-webkit-animation: job 4s 2.6s infinite;z-index: 1002;animation: job 4s 2.6s infinite;z-index: 1002;}
+	.job5{-webkit-animation: job 6s 2.8s infinite;z-index: 1001;animation: job 6s 2.8s infinite;z-index: 1001;}
 	.four .col-sm-0{display: none;}
-	.phoneOut{background: url(../img/shouji.png) no-repeat;background-size: 100% 100%;width:230px;height:450px;overflow: hidden;}
+	.phoneOut{background: url(../img/shouji.png) no-repeat;background-size: 100% 100%;-webkit-background-size: 100% 100%; width:230px;height:450px;overflow: hidden;}
 	.phoneIn{background: red;width:204px; height:346px;margin:53px auto;overflow: hidden;position: relative;}
 	.slideBox{overflow: hidden;width:2000px;position: absolute;}
 	.phoneIn li{float:left;width:204px; height:346px;}
@@ -90,19 +95,19 @@ mark{color:red;background: transparent;}
 	.title h1{margin-bottom:40px}
 	.infor{height:100px; line-height: 80px;margin:30px 0;padding:10px 10px; font-size: 22px;}
 	.three .col-sm-12{margin:40px 0;}
-	.job{background: url(../img/cloud.png); background-size: 100% 100%; height:100px;margin:0 auto;position: relative;}
+	.job{background: url(../img/cloud.png); background-size: 100% 100%;-webkit-background-size: 100% 100%; height:100px;margin:0 auto;position: relative;}
 	.job div{text-align: center;color:purple; font-size:20px;height:28px;position: absolute;left:0;right:0;margin:0 auto;bottom:-40px;}
 	.job div span{border-radius: 10px;background: mediumpurple;padding:0 10px;position: relative;}
 	.job span::before,.job span::after{position: absolute;color:mediumpurple;top:-26px;height:30px;}
 	.job span::before{content: "|";left:30%;}
 	.job span::after{content: "|";right:30%;}
-	.job1{animation: job 4s 2.0s infinite;top:30px;}
-	.job2{animation: job 5s 2.2s infinite;top:-20px;}
-	.job3{animation: job 7s 2.4s infinite;top:15px;}
-	.job4{animation: job 4s 2.6s infinite;top:10px;}
-	.job5{animation: job 6s 2.8s infinite;}
-	.imgOut:hover{box-shadow:0px 0px 20px #000;}
-	.phoneOut{background: url(../img/shouji.png) no-repeat;background-size: 100% 100%;width:230px;height:450px;overflow: hidden;position: relative;}
+	.job1{animation: job 4s 2.0s infinite;top:30px;-webkit-animation: job 4s 2.0s infinite;z-index: 1005;}
+	.job2{animation: job 5s 2.2s infinite;top:-20px;-webkit-animation: job 5s 2.2s infinite;z-index: 1004;}
+	.job3{animation: job 7s 2.4s infinite;top:15px;-webkit-animation: job 7s 2.4s infinite;z-index: 1003;}
+	.job4{animation: job 4s 2.6s infinite;top:10px;-webkit-animation: job 4s 2.6s infinite;z-index: 1002;}
+	.job5{animation: job 6s 2.8s infinite;-webkit-animation: job 6s 2.8s infinite;z-index: 1001;}
+	.imgOut:hover{-webkit-box-shadow:0px 0px 20px #000;box-shadow:0px 0px 20px #000;}
+	.phoneOut{background: url(../img/shouji.png) no-repeat;background-size: 100% 100%;-webkit-background-size: 100% 100%;width:230px;height:450px;overflow: hidden;position: relative;}
 	/*204 346*/
 	.phoneIn{background: red;width:204px; height:346px;margin:53px auto;overflow: hidden;position: relative;}
 	.slideBox{overflow: hidden;width:2000px;position: absolute;}

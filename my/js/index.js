@@ -281,11 +281,11 @@ function worksSlide(){
 	function goTo(obj){    //改项目地址
 		var objLeft = parseInt(obj.css("left"));
 		if(objLeft==-liWid){
-			window.open("http://yanghao000.github.io/zXiu/index.html","_self");
+//			window.open("http://yanghao000.github.io/zXiu/index.html","_self");
 		}else if(objLeft==-2*liWid){
-			window.open("http://yanghao000.github.io/code/index.html","_self");
+//			window.open("http://yanghao000.github.io/code/index.html","_self");
 		}else if(objLeft==-3*liWid){
-			window.open("http://yanghao000.github.io/zXiu2/index3.html","_self");
+//			window.open("http://yanghao000.github.io/zXiu2/index3.html","_self");
 		}
 	}
 	function changeWord(obj){    //改项目名字
@@ -302,12 +302,24 @@ function worksSlide(){
 }
 //手机按钮
 function phoneBtn(){
-	$(".phoneBtn").hover(function(){
-		$(this).parent().find(".mask").stop(true,true).animate({"top":"0"},400);
-		$(this).parent().find(".word").stop(true,true).animate({"top":"134px"},600);
-	},function(){
-		$(this).parent().find(".mask").stop(true,true).animate({"top":"346px"},400);
-		$(this).parent().find(".word").stop(true,true).animate({"top":"-60px"},600);
-	});
+	if($(document).width()<=768){
+		$(".phoneBtn").click(function(){
+			var t = $(this).parent().find(".mask").css("top");
+			if(parseInt(t)==0){
+				$(this).parent().find(".mask").stop(true,true).animate({"top":"346px"},400);
+				$(this).parent().find(".word").stop(true,true).animate({"top":"-60px"},600);
+			}else{
+				$(this).parent().find(".mask").stop(true,true).animate({"top":"0"},400);
+				$(this).parent().find(".word").stop(true,true).animate({"top":"134px"},600);
+			}
+		});
+	}else{
+		$(".phoneBtn").hover(function(){
+			$(this).parent().find(".mask").stop(true,true).animate({"top":"0"},400);
+			$(this).parent().find(".word").stop(true,true).animate({"top":"134px"},600);
+		},function(){
+			$(this).parent().find(".mask").stop(true,true).animate({"top":"346px"},400);
+			$(this).parent().find(".word").stop(true,true).animate({"top":"-60px"},600);
+		});
+	}
 }
-

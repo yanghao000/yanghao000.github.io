@@ -38,7 +38,7 @@
 80% {right:-15px;bottom:-10px;opacity: 0.9;}
 100% {right:0px;bottom:-10px;opacity: 1;}
 }*/
-@-webkit-keyframes ttitleRight{
+@-webkit-keyframes titleRight{
 0%   {right:-180px;opacity: 0.2;}
 20%  {right:80px;opacity: 0.4;}
 40%  {right:-60px;opacity: 0.6;}
@@ -55,8 +55,8 @@
 	to {background-size: 100% 100%;}
 }
 @-webkit-keyframes bg{          /* PC背景动画*/
-	from {background-size: 130% 130%}
-	to {background-size: 100% 100%;}
+	from {-webkit-background-size: 130% 130%}
+	to {-webkit-background-size: 100% 100%;}
 }
 @keyframes bgSmall{		/*移动端背景动画*/
 	from {background-position: -200px 0}
@@ -79,8 +79,8 @@
 	to{transform: rotateY(30deg);}
 }*/
 @-webkit-keyframes infor{
-	from{transform: rotateY(-30deg);}
-	to{transform: rotateY(30deg);}
+	from{-webkit-transform: rotateY(-30deg);}
+	to{-webkit-transform: rotateY(30deg);}
 }
 @-webkit-keyframes job{    
 	0%{left:0px}
@@ -94,11 +94,23 @@
 	75%{left:25px;}
 	100%{left:0px;}
 }
-/*@-moz-keyframes slideDowna{
-	from{height:0px;}
-	to{height:100px;}
+@keyframes tipsL{
+	0,33%{opacity: 0;transform: translate(0px, 0px) rotate(-90deg);}
+	66%{opacity: 1;transform: translate(-10, 0px) rotate(-90deg);}
+	100%{opacity: 0;transform: translate(-20px, 0px) rotate(-90deg);}
 }
-@keyframes slideDowna{
-	from{height:0px;}
-	to{height:100px;}
-}*/
+@-webkit-keyframes tipsL{
+	0,33%{ opacity: 0;-webkit-transform: translate(0px, 0px) rotate(-90deg);}
+	66%{opacity: 1;-webkit-transform: translate(-10, 0px) rotate(-90deg);}
+	100%{opacity: 0;-webkit-transform: translate(-20px, 0px) rotate(-90deg);}
+}
+@keyframes tipsR{
+	0,30%{ opacity: 0;transform: translate(0px, 0px) rotate(90deg);}
+	66%{opacity: 1;transform: translate(10px, 0px) rotate(90deg);}
+	100%{opacity: 0;transform: translate(20px, 0px) rotate(90deg);}
+}
+@-webkit-keyframes tipsR{
+	0,30%{ opacity: 0;-webkit-transform: translate(0px, 0px) rotate(90deg);}
+	66%{opacity: 1;-webkit-transform: translate(10, 0px) rotate(90deg);}
+	100%{opacity: 0;-webkit-transform: translate(20px, 0px) rotate(90deg);}
+}
