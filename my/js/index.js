@@ -1,4 +1,26 @@
+﻿(function judgeIE8down(){
+	var DEFAULT_VERSION = "8.0";
+	var ua = navigator.userAgent.toLowerCase();
+	var isIE = ua.indexOf("msie")>-1;
+	var safariVersion;
+	if(isIE){
+   	safariVersion =  ua.match(/msie ([\d.]+)/)[1];
+   	if(safariVersion <= DEFAULT_VERSION ){
+      	alert("浏览器版本过低，请更换浏览器或提升浏览器版本查看！");
+//  		body.style.display = "none";
+			window.open("http://www.baidu.com","_self");
+  		}else{
+      	my();
+		}
+	}else{
+	   my();
+	}
+})();
+
+
+
 var flag = true;
+function my(){
 $(function(){
 	rightSlide();
 	myHover();
@@ -13,8 +35,10 @@ $(function(){
 	var mySwiper = new Swiper('.swiper-container', {
 		direction: 'vertical',
 		pagination: '.swiper-pagination',
-      mousewheelControl: true,
-      onInit:function(swiper){
+      	mousewheelControl: true,
+      	autoHeight: true, 
+//		freeMode : true,
+      	onInit:function(swiper){
       	titleRestart();
 //    	swiperAnimateCache(swiper);
          swiperAnimate(swiper);
@@ -228,6 +252,7 @@ function skillClick(){
 	});
 }
 //项目展示效果
+
 function worksSlide(){
 	var liNum = $(".slideBox").eq(0).find("li").length;
 	var liWid = $(".slideBox").eq(0).find("li").width();
@@ -266,7 +291,7 @@ function worksSlide(){
 			}
 		},
 		click:function(){
-			goTo($(this));
+//			goTo($(this));
 		}
 	});
 	function judge(obj){
@@ -277,16 +302,6 @@ function worksSlide(){
 			obj.css({"left":-(max-2*liWid)});
 		}
 		flag=true;
-	}
-	function goTo(obj){    //改项目地址
-		var objLeft = parseInt(obj.css("left"));
-		if(objLeft==-liWid){
-//			window.open("http://yanghao000.github.io/zXiu/index.html","_self");
-		}else if(objLeft==-2*liWid){
-//			window.open("http://yanghao000.github.io/code/index.html","_self");
-		}else if(objLeft==-3*liWid){
-//			window.open("http://yanghao000.github.io/zXiu2/index3.html","_self");
-		}
 	}
 	function changeWord(obj){    //改项目名字
 		var objLeft = parseInt(obj.css("left"));
@@ -299,27 +314,34 @@ function worksSlide(){
 			word.html("时尚网");
 		}
 	}
-}
-//手机按钮
-function phoneBtn(){
-	if($(document).width()<=768){
-		$(".phoneBtn").click(function(){
-			var t = $(this).parent().find(".mask").css("top");
-			if(parseInt(t)==0){
-				$(this).parent().find(".mask").stop(true,true).animate({"top":"346px"},400);
-				$(this).parent().find(".word").stop(true,true).animate({"top":"-60px"},600);
-			}else{
-				$(this).parent().find(".mask").stop(true,true).animate({"top":"0"},400);
-				$(this).parent().find(".word").stop(true,true).animate({"top":"134px"},600);
+	(function goTo(){    //改项目地址
+		$(".mask").on("click",function(event){
+			event.stopPropagation;
+			event.preventDefault();
+			console.log(123);
+			var objLeft = parseInt($(this).prev().css("left"));
+			if(objLeft==-liWid){
+				window.open("http://yanghao000.github.io/zXiu/index.html","_self");
+			}else if(objLeft==-2*liWid){
+				window.open("http://yanghao000.github.io/code/index.html","_self");
+			}else if(objLeft==-3*liWid){
+				window.open("http://yanghao000.github.io/zXiu2/index3.html","_self");
 			}
 		});
-	}else{
-		$(".phoneBtn").hover(function(){
-			$(this).parent().find(".mask").stop(true,true).animate({"top":"0"},400);
-			$(this).parent().find(".word").stop(true,true).animate({"top":"134px"},600);
-		},function(){
+	})();
+}
+
+//手机按钮
+function phoneBtn(){
+	$(".phoneBtn").click(function(){
+		var t = $(this).parent().find(".mask").css("top");
+		if(parseInt(t)==0){
 			$(this).parent().find(".mask").stop(true,true).animate({"top":"346px"},400);
 			$(this).parent().find(".word").stop(true,true).animate({"top":"-60px"},600);
-		});
-	}
+		}else{
+			$(this).parent().find(".mask").stop(true,true).animate({"top":"0"},400);
+			$(this).parent().find(".word").stop(true,true).animate({"top":"134px"},600);
+		}
+	});
+}
 }

@@ -95,22 +95,22 @@
 	100%{left:0px;}
 }
 @keyframes tipsL{
-	0,33%{opacity: 0;transform: translate(0px, 0px) rotate(-90deg);}
+	0%,16%{opacity: 0;transform: translate(0px, 0px) rotate(-90deg);}
 	66%{opacity: 1;transform: translate(-10, 0px) rotate(-90deg);}
 	100%{opacity: 0;transform: translate(-20px, 0px) rotate(-90deg);}
 }
 @-webkit-keyframes tipsL{
-	0,33%{ opacity: 0;-webkit-transform: translate(0px, 0px) rotate(-90deg);}
+	0%,16%{ opacity: 0;-webkit-transform: translate(0px, 0px) rotate(-90deg);}
 	66%{opacity: 1;-webkit-transform: translate(-10, 0px) rotate(-90deg);}
 	100%{opacity: 0;-webkit-transform: translate(-20px, 0px) rotate(-90deg);}
 }
 @keyframes tipsR{
-	0,30%{ opacity: 0;transform: translate(0px, 0px) rotate(90deg);}
+	0%,16%{ opacity: 0;transform: translate(0px, 0px) rotate(90deg);}
 	66%{opacity: 1;transform: translate(10px, 0px) rotate(90deg);}
 	100%{opacity: 0;transform: translate(20px, 0px) rotate(90deg);}
 }
 @-webkit-keyframes tipsR{
-	0,30%{ opacity: 0;-webkit-transform: translate(0px, 0px) rotate(90deg);}
+	0%,16%{ opacity: 0;-webkit-transform: translate(0px, 0px) rotate(90deg);}
 	66%{opacity: 1;-webkit-transform: translate(10, 0px) rotate(90deg);}
 	100%{opacity: 0;-webkit-transform: translate(20px, 0px) rotate(90deg);}
 }

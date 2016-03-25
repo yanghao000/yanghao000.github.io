@@ -56,10 +56,11 @@ mark{color:red;background: transparent;}
 /*第三页*/
 .phoneMiddle{position: relative;}
 .tips{font-size:20px;color:#ddd;position: absolute;z-index: 99;}
-.phoneMiddle .tips:nth-of-type(2){width:30px;height:30px;left:25px;top:0;bottom:0;margin:auto 0;transform: rotate(-90deg);animation: tipsL 2s 2s infinite;-webkit-animation: tipsL 2s 2s infinite;}
-.phoneMiddle .tips:nth-of-type(3){width:30px;height:30px;right:25px;top:0;bottom:0;margin:auto 0;transform: rotate(90deg);animation: tipsR 2s 2s infinite;-webkit-animation: tipsR 2s 2s infinite;}
+.phoneMiddle .tips:nth-of-type(2){width:30px;height:30px;left:25px;top:0;bottom:0;margin:auto 0;transform: rotate(-90deg);-webkit-transform:rotate(-90deg);animation: tipsL 1.5s 2s infinite;-webkit-animation: tipsL 1.5s 2s infinite;}
+.phoneMiddle .tips:nth-of-type(3){width:30px;height:30px;right:25px;top:0;bottom:0;margin:auto 0;transform: rotate(90deg);-webkit-transform:rotate(90deg);animation: tipsR 1.5s 2s infinite;-webkit-animation: tipsR 1.5s 2s infinite;}
 .tips img{width:30px;height:30px;}
 .phoneBtn{font-size: 12px;line-height: 36px;text-align: center;color:#000;}
+.phoneBtn:hover{cursor: pointer;}
 @media only screen and (max-width: 768px) {    
 	.swiper-slide{background-position: -500px;background-size: cover;-webkit-background-size:cover;}
 	.one{animation: bgSmall 2s;-webkit-animation: bgSmall 2s;}
