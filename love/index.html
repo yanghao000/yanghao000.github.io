@@ -139,12 +139,12 @@
 				if(i==2){
 					$(".threeBg").show();
 					$(".early").show();
-					$('.early img').eq(1).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					$('.early img').eq(1).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 						$(".early").fadeOut(300,function(){
 							$(".bus").fadeIn(300);
 						});
 					});
-					$('.bus img').eq(3).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					$('.bus img').eq(3).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 						setTimeout(function(){
 							$(".bus").fadeOut(300,function(){
 								$(".myTeam").fadeIn(300);
@@ -174,7 +174,7 @@
 			function five(i){
 				if(i==4){
 					$(".five").children("img").not(".five img:eq(3)").show();
-					$(".five img").eq(2).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					$(".five img").eq(2).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 						$(".five img").eq(0).fadeOut(300,function(){
 							$(".five img").eq(3).fadeIn(300);
 						});
