@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>love</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1"/>
+	   <link rel="stylesheet" href="css/swiper.min.css">
+	   <link rel="stylesheet" href="css/animate.min.css">
+	   <link rel="stylesheet" href="css/love.css" />
+	   <script src="js/jquery-1.12.0.js"></script>
+	   <script src="js/swiper.min.js"></script>
+	   <script src="js/swiper.animate.min.js"></script>
+	   <!--<script src="js/swiper.animate-twice.min.js"></script>-->
+	</head>
+	<body>
+		<div class="swiper-container">
+		   <div class="swiper-wrapper">
+		      <div class="swiper-slide one">
+			      <div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/indexBuilding.png"></div>
+			     	<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s"><img src="img/indexTxt.png"></div>
+					<div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"><img src="img/indexStars.png"></div>
+			     	<div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"><img src="img/indexElements.png"></div>
+			     	<div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s"><img src="img/indexCloud.png"></div>
+			     	<div class="ani" swiper-animate-effect="zoomInDown" swiper-animate-delay="1.5s"><img src="img/indexFlight.png"></div>
+			     	<img id="arrow" class="ani" src="img/arrow.png">
+		      </div>
+		      <div class="swiper-slide two">
+		      	<div class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><img src="img/wasBg.jpg"/></div>
+		      	<div class="ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s" swiper-animate-delay="1s"><img src="img/wasStar.png"/></div>
+		      	<div class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1.5s"><img src="img/wasIT.png"/></div>
+		      	<div class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="2s"><img src="img/wasFarm.png"/></div>
+		      	<img id="arrow" class="ani" src="img/arrow.png">
+		      </div>
+		      <div class="swiper-slide three" >
+		      	<img class="threeBg animated fadeInUp" src="img/earlyBg.jpg">
+		      	<div class="early">
+		      		<img class="animated fadeIn" src="img/earlyBuilding.png">
+		      		<img class="animated fadeIn" src="img/earlyTitle.png">
+		      	</div>
+		      	<div class="bus">
+		      		<img class="animated fadeIn" src="img/lastBusStation.png">
+		      		<img class="animated fadeIn" src="img/lastBusTitle.png">
+		      		<img class="animated fadeOutLeftBig" src="img/bus.png">
+		      		<img class="animated fadeInRightBig" src="img/lastBusAvatar.png">
+		      	</div>
+		      	<div class="myTeam">
+		      		<img class="animated fadeIn" src="img/myTeamBg.jpg"/>
+		      		<img class="animated slideInUp" src="img/myTeamWall.png"/>
+		      		<img class="animated bounceIn" src="img/myTeamAvatar.png"/>
+		      		<img class="animated zoomInDown" src="img/myTeamTxt.png"/>
+		      		<img class="animated zoomInDown" src="img/myTeamTxt01.png"/>
+		      		<img class="animated zoomInDown" src="img/myTeamTxt02.png"/>
+		      		<img class="animated zoomInDown" src="img/myTeamTxt03.png"/>
+		      		<img class="animated rotateIn" src="img/myteamWhereTxt.png"/>
+		      	</div>
+		      	<img id="arrow" class="ani" src="img/arrow.png">
+		      </div>
+		      <div class="swiper-slide four">
+		      	<div class="lightOff">
+		      		<img class="animated fadeIn" src="img/lightOffBg.jpg"/>
+		      		<img class="animated slideInRight" src="img/cornerWall.png"/>
+		      		<img class="animated bounceInRight" src="img/cornerTitle.png"/>
+		      		<img class="animated fadeIn" src="img/lightOff.png"/>
+		      		<div class="animated fadeIn"><img src="img/clickGuide.png"/></div>
+		      		<p class="btn"></p>
+		      	</div>
+		      	<div class="lightOn">
+		      		<img class="animated" src="img/lightOnBg.jpg"/>
+		      		<img class="animated" src="img/lightOn.png"/>
+		      		<img class="animated zoomInUp" src="img/lightFlowers.png"/>
+		      		<img class="animated rubberBand" src="img/weKnowYou.png"/>
+		      	</div>
+		      	<img id="arrow" class="ani" src="img/arrow.png">
+		      </div>
+		      <div class="swiper-slide five">
+		      	<img class="animated zoomInLeft" src="img/footTa.png"/>
+		      	<img class="animated zoomIn" src="img/footCity.jpg"/>
+		      	<img class="animated zoomIn" src="img/footAvatar.png"/>
+		      	<img class="animated bounceIn" src="img/footTx.png"/>
+		      	<img id="arrow" class="ani" src="img/arrow.png">
+		      </div>
+		   </div>
+		   <div class="swiper-pagination"></div>
+		</div>
+	  	<div id="musicRotate" class="musicRotate-active"><audio id="player" src="http://lxcdn.rabbitpre.com/7e5324e2-f73d-40ab-a809-9e49b6e2a7be-9269" autoplay="autoplay"></audio></div>
+		<div id="musicBg" class="musicBg-active"></div>
+		<div id="musicBtn" class="active"></div>
+		
+		<script>
+			$(function(){
+		 		newSwiper();
+		 		musicBtn();
+		 	});
+			function newSwiper(){
+		      var mySwiper = new Swiper('.swiper-container', {
+		         direction: 'vertical',
+		         pagination: '.swiper-pagination',
+		         mousewheelControl: true,
+		         onInit: function(swiper){ 
+		  				swiperAnimateCache(swiper); 
+						swiperAnimate(swiper);
+//						$("swiper-slide").not($("swiper-slide:eq(0)")).children().hide();
+					}, 
+					onSlideChangeEnd: function(swiper){ 
+						swiperAnimate(swiper);
+						console.log(mySwiper.activeIndex);
+						team(mySwiper.activeIndex);
+						lightBtn(mySwiper.activeIndex);
+		 				five(mySwiper.activeIndex);
+//		 				$("swiper-slide").eq(mySwiper.activeIndex).children().show();
+//		 				$("swiper-slide").eq(mySwiper.previousIndex).children().hide();
+					} 
+		      });
+	   	}
+			function musicBtn(){
+	 			$("#musicBtn").on("click",function(){
+	 				var that = $(this);
+	 				var a = $("#musicRotate");
+	 				var b = $("#musicBg");
+	 				if(that.hasClass("active")){
+	 					that.removeClass("active");
+	 					a.removeClass("musicRotate-active");
+	   				b.removeClass("musicBg-active");
+	 				}else{
+	 					that.addClass("active");
+	 					a.addClass("musicRotate-active");
+	   				b.addClass("musicBg-active");
+	 				}
+	 				var player = $("#player")[0];
+	 				console.log(player);
+	 				if(player.paused){
+						player.play();
+					}else{
+						player.pause();
+					}
+	 			});
+	 		}
+			function team(i){
+				if(i==2){
+					$(".threeBg").show();
+					$(".early").show();
+					$('.early img').eq(1).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+						$(".early").fadeOut(300,function(){
+							$(".bus").fadeIn(300);
+						});
+					});
+					$('.bus img').eq(3).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+						setTimeout(function(){
+							$(".bus").fadeOut(300,function(){
+								$(".myTeam").fadeIn(300);
+							});
+						},500);
+					});	
+				}else{
+					$(".threeBg").hide();
+					$(".early").hide();
+					$(".bus").hide();
+					$(".myTeam").hide();
+				}
+			}
+			function lightBtn(i){
+				if(i==3){
+					$(".lightOff").show();
+					$(".btn").on("click",function(){
+						$(".lightOff").fadeOut(500,function(){
+							$(".lightOn").fadeIn(500);
+						});
+					});
+				}else{
+					$(".lightOn").hide();
+					$(".lightOff").hide();
+				}
+			}
+			function five(i){
+				if(i==4){
+					$(".five").children("img").not(".five img:eq(3)").show();
+					$(".five img").eq(2).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+						$(".five img").eq(0).fadeOut(300,function(){
+							$(".five img").eq(3).fadeIn(300);
+						});
+					});	
+				}else{
+					$(".five").children("img").hide();
+				}
+			}
+		</script>
+	</body>
+</html>

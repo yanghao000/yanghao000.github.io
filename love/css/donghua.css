@@ -1,0 +1,18 @@
+@keyframes arrow{
+   0%,16%{opacity: 0;transform: translate(0px, 0px)}
+   66%{opacity: 1;transform: translate(0, -8px)}
+   100%{opacity: 0;transform: translate(0px, -16px)}
+}
+@-webkit-keyframes arrow{
+   0%,16%{ opacity: 0;-webkit-transform: translate(0px, 0px)}
+   66%{opacity: 1;-webkit-transform: translate(0, -8px)}
+   100%{opacity: 0;-webkit-transform: translate(0px, -16px)}
+}
+@keyframes music{
+   from{transform:rotate(0deg)}
+   to{transform:rotate(360deg)}
+}
+@-webkit-keyframes music{
+   from{transform:rotate(0deg)}
+   to{transform:rotate(360deg)}
+}
