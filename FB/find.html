@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>find</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1"/>
+		<link rel="stylesheet" href="css/com.css" />
+		<style>
+			html,body{height:100%;}
+			body{background: #f1f1f1;}
+			.search{height:0.66rem;padding:0 0.1rem;overflow: hidden;background: #fff;}
+			.search input{border-radius:0.08rem;float:left;width:5.1rem;height:0.48rem;font-size: 0.24rem;color:#ccc;outline: none;border:none;border:1px solid #ccc;margin-top:0.08rem;text-indent: 0.12rem;}
+			.findBtn{width:0.9rem;height:0.48rem;line-height: 0.48rem;text-align: center;background: #0f91c5; border-radius: 0.08rem;float: right;border:1px solid #ccc;margin-top:0.08rem;color:#fff;}
+			.user{padding:0.2rem;background: #fff;overflow: hidden;border-bottom:1px solid #ccc;}
+			.headPhoto{width:0.95rem;height:0.95rem;float: left;margin-right:0.2rem;border-radius: 50%; overflow: hidden;}
+			.headPhoto img{width:0.95rem;height:0.95rem; display: block;}
+			.userInfor{width:4.8rem;min-height:0.95rem;height:auto;float: left;position: relative;}
+			.userName{font-size: 0.28rem;color:#000;position: absolute;top:0.03rem;left:0;}
+			.sign{font-size: 0.24rem;color:#999;margin-top:0.56rem;}
+			.userInfor div:nth-child(2){font-size:0.22rem;height:0.34rem;line-height:0.34rem;text-align:center; width:0.76rem;border-radius:0.08rem;position: absolute;top:0.08rem;right:0;}
+			.userInfor div:nth-child(2){color:#e6e6e6;background: #ccc;}
+			.user .userInfor .focusBtn{color:#fff;background: #0f91c5;}
+			
+			
+			#findScrollOut{position: relative;}
+			#findScrollIn{position: absolute;}
+		</style>
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/localStorage.js"></script>
+		<script src="js/find.js"></script>
+		<script src="js/ajax.js"></script>
+		
+	</head>
+	<body>
+		<header class="header">发现</header>
+		<div class="search">
+			<input type="text" placeholder="请输入昵称"/>
+			<div class="findBtn">搜索</div>
+		</div>
+		<div id="findScrollOut">
+			<div id="findScrollIn">
+				<div class="searchList">
+					<!--<div class="user">
+						<div class="headPhoto"><img src="img/headPhoto.png"/></div>
+						<div class="userInfor">
+							<div class="userName">我叫小强</div>
+							<div>关注</div>
+							<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+		
+		<footer class="footer">
+			<ul>
+				<a href="index.html"><li><i class="iconfont">&#xe689;</i><p>首页</p></li></a>
+				<a href="find.html"><li><i class="iconfont active">&#xe662;</i><p class="active">发现</p></li></a>
+				<li><i class="iconfont">&#xe669;</i><div></div></li>
+				<a href="self.html"><li><i class="iconfont">&#xe6bc;</i><p>我的</p></li></a>
+				<a href="login.html"><li><i class="iconfont">&#xe638;</i><p>退出</p></li></a>
+			</ul>
+		</footer>
+	</body>
+</html>

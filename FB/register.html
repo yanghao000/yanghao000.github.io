@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>register</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1"/>
+		<link rel="stylesheet" href="css/com.css" />
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/ajax.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			足球圈子-注册
+		</header>
+		<div class="text"><input type="text" placeholder="手机号" /></div>
+		<div class="text"><input type="password" placeholder="密码" /></div>
+		<div class="text"><input type="text" placeholder="昵称" /></div>
+		<div class="btnOut">
+			<div class="btn">提交</div>
+		</div>
+		<script>
+			$(function(){
+				document.documentElement.style.fontSize = document.body.clientWidth/6.4 + "px";
+				
+				$("input").on("focus",function(){
+					$(this).css("color","#b2b2b2").val("");
+				});
+				$(".text:eq(0) input").on("blur",function(){
+					var phoneNum = $(this).val();
+					if(phoneNum!=""){
+						var str = phoneNum.match(/^(13|14|18|15)\d{9}$/g);
+						if(str!=null){
+							$(this).css("color","green");
+							$(this).attr("name","yes");
+						}else{
+							$(this).val("请输入合法手机号");
+							$(this).css("color","red");
+							$(this).attr("name","no");
+						}
+					}else{
+						$(this).attr("name","no");
+					}	
+				});
+				$(".text:eq(1) input").on("blur",function(){
+					var pass = $(this).val();
+					if(pass!=""){
+						var reg = /^[a-zA-Z\d]\w{5,11}$/g;
+						if(reg.test(pass)){
+							$(this).css("color","green");
+							$(this).attr("name","yes");
+						}else{
+							$(this).attr("type","text");
+							$(this).val("请输入6-12位密码(不能以_开头)");
+							$(this).css("color","red");
+							$(this).attr("name","no");
+						}
+						$(this).focus(function(){
+							$(this).attr("type","password");
+						});
+					}else{
+						$(this).attr("name","no");
+					}	
+				});
+				$(".text:eq(2) input").on("blur",function(){
+					var userName = $(this).val();
+					if(userName!=""){
+						var reg = /^[\u4E00-\u9FA5|\w]{2,20}$/g;
+						if(reg.test(userName)){
+							$(this).css("color","green");
+							$(this).attr("name","yes");
+						}else{
+							$(this).attr("type","text");
+							$(this).val("昵称长度为2-20个字符");
+							$(this).css("color","red");
+							$(this).attr("name","no");
+						}
+					}else{
+						$(this).attr("name","no");
+					}	
+				});	
+				$(".btn").on("click",function(){
+					var num = 0;
+					for(var i=0; i<$("input").size(); i++){
+						if($("input").eq(i).attr("name")=="yes"){
+							num++;
+						}
+					}
+					if(num==3){
+						register();
+					}else{
+						pop("请准确填写信息");
+					}
+				});
+				
+				function register(){
+					var json = {}
+					json.loginname = $(".text:eq(0) input").val();
+					json.password = $(".text:eq(1) input").val();
+					json.nickname = $(".text:eq(2) input").val();
+					regAjax(json,function(data){
+						console.log(data);
+						if(data.ecode==200){
+							pop("注册成功",function(){
+								window.open("login.html","_self");
+							});
+						}else{
+							pop(data.errorinfo);
+						}
+					});
+				}
+			});
+		</script>
+	</body>
+</html>

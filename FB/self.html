@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1"/>
+		<link rel="stylesheet" href="css/com.css" />
+		<style>
+			html,body{background: #f1f1f1;height:100%}
+			.photoBox{overflow: hidden;}
+			.photoBox img{width:3.12rem;height:3.12rem;display: block;float:left;margin-top:0.1rem;}
+			.photoBox img:nth-child(even){float:right;}
+			.focusBox,.fensBox{display: none;}
+		</style>
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/self.js"></script>
+	</head>
+	<body>
+		<header class="header">个人中心</header>
+		<div class="search">
+			<input type="text" placeholder="请输入昵称"/>
+			<div class="findBtn">搜索</div>
+		</div>
+		<div class="user">
+			<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+			<div class="userInfor">
+				<div class="userName">我叫小强</div>
+				<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+			</div>
+		</div>
+		<nav class="nav">
+			<ul>
+				<li class="active">照片(<span>1</span>)</li>
+				<li>关注(<span>2</span>)</li>
+				<li>粉丝(<span>3</span>)</li>
+			</ul>
+		</nav>
+		<div class="selfScroll">
+		<div id="iScroller">
+		<div class="photoBox selfBox">
+			<img src="img/contBoxImg.jpg"/>
+			<img src="img/contBoxImg.jpg"/>
+			<img src="img/contBoxImg.jpg"/>
+			<img src="img/contBoxImg.jpg"/>
+		</div>
+		<div class="focusBox selfBox">
+			<div class="user">
+				<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+				<div class="userInfor">
+					<div class="userName">我的关注</div>
+					<div class="focusBtn">关注</div>
+					<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+				</div>
+			</div>
+			<div class="user">
+				<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+				<div class="userInfor">
+					<div class="userName">我的关注</div>
+					<div class="focusBtn">关注</div>
+					<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+				</div>
+			</div>
+			<div class="user">
+				<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+				<div class="userInfor">
+					<div class="userName">我的关注</div>
+					<div class="focusBtn">关注</div>
+					<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+				</div>
+			</div>
+			<div class="user">
+				<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+				<div class="userInfor">
+					<div class="userName">我的关注</div>
+					<div class="focusBtn">关注</div>
+					<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+				</div>
+			</div>
+		</div>
+		<div class="fensBox selfBox">
+			<div class="user">
+				<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+				<div class="userInfor">
+					<div class="userName">我是粉丝</div>
+					<div class="focusBtn">关注</div>
+					<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+				</div>
+			</div>
+			<div class="user">
+				<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+				<div class="userInfor">
+					<div class="userName">我是粉丝</div>
+					<div class="focusBtn">关注</div>
+					<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+				</div>
+			</div>
+			<div class="user">
+				<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+				<div class="userInfor">
+					<div class="userName">我是粉丝</div>
+					<div class="focusBtn">关注</div>
+					<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+				</div>
+			</div>
+			<div class="user">
+				<div class="headPhoto"><a href=""><img src="img/headPhoto.png"/></a></div>
+				<div class="userInfor">
+					<div class="userName">我是粉丝</div>
+					<div class="focusBtn">关注</div>
+					<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<footer class="footer">
+			<ul>
+				<a href="index.html"><li><i class="iconfont">&#xe689;</i><p>首页</p></li></a>
+				<a href="find.html"><li><i class="iconfont">&#xe662;</i><p>发现</p></li></a>
+				<li><i class="iconfont">&#xe669;</i><div></div></li>
+				<a href="self.html"><li><i class="iconfont active">&#xe6bc;</i><p class="active">我的</p></li></a>
+				<a href="login.html"><li><i class="iconfont">&#xe638;</i><p>退出</p></li></a>
+			</ul>
+		</footer>
+	</body>
+</html>
