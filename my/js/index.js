@@ -309,7 +309,7 @@ function worksSlide(){
 		if(objLeft==-liWid){
 			word.html("走秀网");
 		}else if(objLeft==-2*liWid){
-			word.html("旅游网");
+			word.html("乐橙网");
 		}else if(objLeft==-3*liWid){
 			word.html("时尚网");
 		}
@@ -323,7 +323,7 @@ function worksSlide(){
 			if(objLeft==-liWid){
 				window.open("http://yanghao000.github.io/zXiu/index.html","_self");
 			}else if(objLeft==-2*liWid){
-				window.open("http://yanghao000.github.io/code/index.html","_self");
+				window.open("http://yanghao000.github.io/lechange/index.html","_self");
 			}else if(objLeft==-3*liWid){
 				window.open("http://yanghao000.github.io/zXiu2/index3.html","_self");
 			}
