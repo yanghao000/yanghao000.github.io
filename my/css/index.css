@@ -86,7 +86,7 @@ mark{color:red;background: transparent;}
 	.phoneIn img{width:100%; height:100%;display: block;}
 	.phoneBtn{position: absolute;width:36px; height:36px;left:0;right:0;margin:0 auto; bottom:9px;border-radius: 50%;opacity: 0.6;}
 	.mask{position: absolute;width:204px;height:346px;top:346px;left:0;opacity: 0.5;background: #000;}
-	.word{position: absolute;height:60px;line-height: 60px;font-size: 30px;left:0;right:0;margin:0 auto;text-align: center;top:-60px;}
+	.word{position: absolute;height:60px;line-height: 60px;font-size: 30px;left:0;right:0;margin:0 auto;text-align: center;top:-60px;z-index:99;}
 	.workExp h3{margin-top:10px;}
 	/*.four .col-md-4{margin-bottom:20px;}*/
 	.five .col-md-6{margin-bottom:20px;}
@@ -117,7 +117,7 @@ mark{color:red;background: transparent;}
 	.four .row{ overflow: hidden;}
 	.phoneBtn{position: absolute;width:36px; height:36px;left:0;right:0;margin:0 auto; bottom:9px;border-radius: 50%;opacity: 0.6;}
 	.mask{position: absolute;width:204px;height:346px;top:346px;left:0;opacity: 0.5;background: #000;}
-	.word{position: absolute;height:60px;line-height: 60px;font-size: 30px;left:0;right:0;margin:0 auto;text-align: center;top:-60px;}
+	.word{position: absolute;height:60px;line-height: 60px;font-size: 30px;left:0;right:0;margin:0 auto;text-align: center;top:-60px;z-index:99;}
 	.workExp{width:70%;margin:0 auto;}
 	.five .container{overflow: hidden;}
 }
