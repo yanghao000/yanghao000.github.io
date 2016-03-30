@@ -1,0 +1,41 @@
+/* CSS Document */
+
+/*-----------底部浮动----------*/
+.float_bm { z-index:0; position: fixed; width: 100%; bottom:0px; height:60px;  padding-top:10px;  *height:70px;  *padding-top:0px; background-color:rgba(0, 0, 0, 0.75); -pie-background:rgba(0, 0, 0, 0.75);/*IE6-8*/ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000, endColorstr=#BF000000);
+_position:absolute;
+_bottom:auto;
+_background:#000;
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+.bm_center{ width:1000px; margin:0 auto;}
+.float_bm_txt { display:inline-block; padding-top:6px; *padding-top:15px; padding-left:18px; float:left; color:#fff; font-size:20px; line-height:40px; font-family:微软雅黑;  _width:210PX;  _padding-left:0px; }
+.float_bm_box { width:auto; float:left; }
+.float_bm_box input { width:180px; *width:165px;
+height:21px; line-height:21px; padding:7px 0; border:0px; font-size:14px; font-family:微软雅黑; text-indent:6px; margin-left:6px; *margin-left:0px; display:inline; }
+.float_bm_box input.btnA { cursor:pointer; background:#F90; display:block font-family:微软雅黑; text-align:center; font-size:18px; border:0; width:102px; height:35px; line-height:35px; color:#fff;  padding:0px 0;}
+.float_bm_box input.btnA:hover{ background-color:#FD1D48;}
+input.fqh_btnA { cursor:pointer;  border:0; width:138px; height:35px; text-indent:-9999px; }
+
+.addhdico{ background:url("../images/addhd.png"/*tpa=http://www.yourclub.cn/templets/default/images/addhd.png*/); width:45px; height:157px; display: inline-block; position: fixed;
+_position:absolute;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+_margin-bottom:250px;
+}
+
+.placeholder{ color:#666;}
+#closepic{ bottom:70px!important;}
+.float_bm_box a { width:180px; *width:165px; cursor:pointer;
+height:21px; line-height:21px; padding:7px 0; border:0px; font-size:14px; font-family:微软雅黑; text-indent:6px; margin-left:6px; *margin-left:0px; display:inline;  color:#fff; }
+
+a.btnA { cursor:pointer; background:#F90; display:block; font-family:微软雅黑; text-align:center; font-size:18px; border:0; width:102px; height:35px; line-height:35px; color:#fff!important;  padding:0px 0;}
+a.btnA:hover{ background-color:#FD1D48;}
+
+.fastreg2{ clear:both;}
+.bm_center2{margin:0 auto; background-color:#3f3f3f; margin-bottom:10px;}
+.float_bm_txt2 { display:inline-block; padding-top:6px;  padding-bottom:6px; padding-left:18px; float:left; color:#fff; font-size:20px; line-height:40px; font-family:微软雅黑;  _width:210PX;  _padding-left:0px; }
+.float_bm_box2 { width:auto; float:left; }
+.float_bm_box2 input { width:180px; *width:180px;
+height:21px; line-height:21px; padding:7px 0; border:0px; font-size:14px; font-family:微软雅黑; text-indent:6px; margin-left:6px; *margin-left:0px; display:inline; }
+.float_bm_box2 input.btnA { cursor:pointer; background:#F90; font-family:微软雅黑; text-align:center; font-size:18px; border:0; width:102px; height:35px; line-height:35px; color:#fff;  padding:0px 0;}
+.float_bm_box2 input.btnA:hover{ background-color:#FD1D48;}

@@ -1,0 +1,37 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 arial,simsun;color:#555;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+small{font-size:12px;}ul,ol{list-style:none;}
+a{text-decoration:none;color:#16b;}
+a:hover{text-decoration:underline;}
+sup{vertical-align:text-top;}
+label{ vertical-align:middle;}
+sub{vertical-align:text-bottom;}
+legend{color:#000;}
+fieldset,img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+button,input,select,textarea{font-size:100%;}
+.blank10{clear:both;height:10px;overflow:hidden;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden; line-height:0; font-size:0;}
+.clearfix{display:inline-block;}/* Hides from IE-mac \*/
+* html .clearfix{height:1%;}
+.clearfix{display:block;}/* End hide from IE-mac */
+#Search{background-color:#f3f2ef;cursor:pointer; width:50px; border:solid 1px #829fbb; height:24px; text-decoration:none; margin-bottom:1px;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block;margin:0;padding:0;}/*html5 elements*/
+.totop {
+    font-size: 12px;
+    height: 50px;
+    line-height: 35px;
+    overflow: hidden;
+    width: 50px;
+}
+.totop a {
+    background: url("images/totop.giff-"/*tpa=http://www.yourclub.cn/templets/default/style/images/totop.giff"*/) no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 50px;
+}
