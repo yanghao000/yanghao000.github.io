@@ -307,19 +307,19 @@ function worksSlide(){
 		var objLeft = parseInt(obj.css("left"));
 		var word = obj.siblings(".word")
 		if(objLeft==-liWid){
-			word.html("走秀网");
+			word.html("点击进入");
 		}else if(objLeft==-2*liWid){
-			word.html("乐橙网");
+			word.html("点击进入");
 		}else if(objLeft==-3*liWid){
-			word.html("时尚网");
+			word.html("点击进入");
 		}
 	}
 	(function goTo(){    //改项目地址
-		$(".mask").on("click",function(event){
+		$(".word").on("click",function(event){
 			event.stopPropagation;
 			event.preventDefault();
 			console.log(123);
-			var objLeft = parseInt($(this).prev().css("left"));
+			var objLeft = parseInt($(this).prev().prev().css("left"));
 			if(objLeft==-liWid){
 				window.open("http://yanghao000.github.io/zXiu/index.html","_self");
 			}else if(objLeft==-2*liWid){
