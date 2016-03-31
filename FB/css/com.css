@@ -236,3 +236,9 @@ animation-delay: .8s;
     50% {height:5px;transform:translateY(0px);background:#b1e4f8;}
     100% {height:5px;transform:translateY(0px);background:#b1e4f8;}
 }
+@-webkit-keyframes preloader_1 {
+    0% {height:5px;-webkit-transform:translateY(0px);background:#b1e4f8;}
+    25% {height:30px;-webkit-transform:translateY(15px);background:#3498db;}
+    50% {height:5px;-webkit-transform:translateY(0px);background:#b1e4f8;}
+    100% {height:5px;-webkit-transform:translateY(0px);background:#b1e4f8;}
+}

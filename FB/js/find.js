@@ -6,7 +6,11 @@ $(function(){
 	loadingFind($("#findScrollIn"),"上拉加载","after");
 	loadingHei = $(".spinnerOut").outerHeight(true);
 	findScroll();
-	findRequire();
+//	findRequire();
+showLoading();
+		myScroll.refresh();
+		myScroll.maxScrollY = myScroll.maxScrollY + loadingHei;
+		focusBtnFn();
 });
 var myScroll = null;
 var loadingHei;
@@ -110,7 +114,16 @@ function upActive(){
 	if(flag){
 		flag = 0;
 		var t = setTimeout(function(){
-			findRequire();
+			$(
+				'<div class="user">'+
+					'<div class="headPhoto"><img src="img/headPhoto.png"/></div>'+
+						'<div class="userInfor">'+
+							'<div class="userName">上上上</div>'+
+							'<div>关注</div>'+
+							'<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>'+
+						'</div>'+
+				'</div>'
+			).prependTo(".searchList");
 			myScroll.refresh();
 			flag = 1;
 		},1000);
@@ -121,7 +134,16 @@ function downActive(){
 	if(flag){
 		flag = 0;
 		var t = setTimeout(function(){	
-			findRequire()
+			$(
+				'<div class="user">'+
+					'<div class="headPhoto"><img src="img/headPhoto.png"/></div>'+
+						'<div class="userInfor">'+
+							'<div class="userName">下下下</div>'+
+							'<div>关注</div>'+
+							'<div class="sign">我是小强我怕谁!呵呵呵！！撒的发违法发阿文范文芳撒的发</div>'+
+						'</div>'+
+				'</div>'
+			).appendTo(".searchList");
 			myScroll.refresh();
 			flag = 1;
 		},1000);
