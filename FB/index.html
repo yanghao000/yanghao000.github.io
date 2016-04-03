@@ -409,6 +409,7 @@ function hotScrollL(){
 		}
 	});
 	hotLobj.maxScrollY = hotLobj.maxScrollY + loadingHei;
+	document.documentElement.addEventListener('touchmove',function (e) { e.preventDefault(); },false);
 //	setTimeout(function(){
 //		hotLobj.refresh();
 //		hotLobj.maxScrollY = hotLobj.maxScrollY + loadingHei;
@@ -716,7 +717,6 @@ function focusScroll(){
 //		focusObj.maxScrollY = focusObj.maxScrollY + loadingHei;
 //	},10);
 }
-
 		</script>
 	</body>
 </html>
