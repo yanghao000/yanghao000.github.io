@@ -31,8 +31,9 @@ $(function(){
 	skillClick();
 	worksSlide();
 	phoneBtn();
-	$('.navbar-collapse a').not("#drog").click(function(){
-        $('.navbar-collapse').collapse('hide');
+	$('.navbar-collapse li').not("#drog").click(function(){
+       	$(".navbar-toggle").addClass("collapsed");
+       	$("#navbar-collapse").removeClass("in");
     });
 //	new WOW().init();
 	var mySwiper = new Swiper('.swiper-container', {
