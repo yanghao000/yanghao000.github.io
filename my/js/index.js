@@ -50,6 +50,14 @@ $(function(){
       	$(".swiper-container .container").scrollTop("0");
       	navShow(mySwiper.activeIndex);
       },
+      onSlideChangeStart:function(swiper){
+      	if(mySwiper.activeIndex == 3){
+      		console.log(123);
+      		pop("可左右滑动，点击按钮进入链接");
+      	}else{
+      		$(".pop").hide();
+      	}
+      },
       onTouchEnd:function(){
    		twoPage();
    		fourPage();
@@ -312,6 +320,8 @@ function worksSlide(){
 			word.html("点击进入");
 		}else if(objLeft==-3*liWid){
 			word.html("点击进入");
+		}else if(objLeft==-4*liWid){
+			word.html("点击进入");
 		}
 	}
 	(function goTo(){    //改项目地址
@@ -321,12 +331,15 @@ function worksSlide(){
 			console.log(123);
 			var objLeft = parseInt($(this).prev().prev().css("left"));
 			if(objLeft==-liWid){
-				window.open("http://yanghao000.github.io/youka/index.html","_self");
+				window.open("http://yanghao000.github.io/FB/index.html","_blank");
 			}else if(objLeft==-2*liWid){
-				window.open("http://yanghao000.github.io/zXiu/index.html","_self");
+				window.open("http://yanghao000.github.io/zXiu/index.html","_blank");
 			}else if(objLeft==-3*liWid){
-				window.open("http://yanghao000.github.io/zXiu2/index3.html","_self");
+				window.open("http://yanghao000.github.io/zXiu2/index3.html","_blank");
+			}else if(objLeft==-4*liWid){
+				window.open("http://yanghao000.github.io/love/index.html","_blank");
 			}
+			
 		});
 	})();
 }
@@ -343,5 +356,61 @@ function phoneBtn(){
 			$(this).parent().find(".word").stop(true,true).animate({"top":"134px"},600);
 		}
 	});
+}
+var flagg = true;
+function pop(str,fn){
+	if(flagg){
+		flagg=false;
+		if($("body").outerWidth(true)>768){
+			$("<div class='pop'>"+str+"</div>").appendTo("body").css({
+				position:"absolute",
+			 	width:"30%",
+			 	fontSize:"16px",
+			 	lineHeight:"50px",
+			 	textAlign:"center",
+			 	margin:"0 auto",
+			 	background:"#0f91c5",
+			 	borderRadius:"10px",
+			 	color:"#fff",
+			 	left:"0",
+			 	right:"0",
+			 	opacity:"0",
+			 	bottom:"0",
+			 	zIndex:"99999",
+			}).animate({opacity:"1",bottom:"200px"},2000,function(){
+			 	var that = $(this);
+			 	var t = setTimeout(function(){
+			 		that.fadeOut(300);
+			 		flagg=true;
+			 		if(fn){fn();}
+			 	},2500);
+			});
+		}else{
+			$("<div class='pop'>"+str+"</div>").appendTo("body").css({
+				position:"absolute",
+			 	width:"80%",
+			 	fontSize:"14px",
+			 	lineHeight:"30px",
+			 	textAlign:"center",
+			 	margin:"0 auto",
+			 	background:"#0f91c5",
+			 	borderRadius:"10px",
+			 	color:"#fff",
+			 	left:"0",
+			 	right:"0",
+			 	opacity:"0",
+			 	bottom:"0",
+			 	zIndex:"99999",
+			}).animate({opacity:"1",bottom:"40%"},2000,function(){
+			 	var that = $(this);
+			 	var t = setTimeout(function(){
+			 		that.fadeOut(300);
+			 		flagg=true;
+			 		if(fn){fn();}
+			 	},2500);
+			});
+		}
+		
+	}
 }
 }

@@ -72,10 +72,38 @@
 							<div id="iScrollLIn">
 								<div class="indexSlide indexSlideL">
 									<section class="contIndex">
-										<!--<div class="contBox">
+										<div class="contBox">
 											<img src="img/contBoxImg.jpg"/>
 											<p>蜡笔小新！蜡笔小新新新！！！！</p>
-										</div>-->
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
 									</section>
 								</div>
 							</div>
@@ -86,7 +114,34 @@
 							<div id="iScrollCIn">
 								<div class="indexSlide indexSlideC">
 									<section class="contIndex">
-										
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
 									</section>
 								</div>
 							</div>
@@ -97,7 +152,34 @@
 							<div id="iScrollRIn">
 								<div class="indexSlide indexSlideR">
 									<section class="contIndex">
-										
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
+										<div class="contBox">
+											<img src="img/contBoxImg.jpg"/>
+											<p>蜡笔小新！蜡笔小新新新！！！！</p>
+										</div>
 									</section>
 								</div>
 							</div>
@@ -167,9 +249,19 @@ $(function(){
 	swiperHei();
 	navClick();
 	proLoading($("#iScrollLIn"));
+	proLoading($("#iScrollCIn"));
+	proLoading($("#iScrollRIn"));
+	proLoading($("#focusScrollIn"));
+	showLoading();
 	loadingHei = $(".spinnerOut").outerHeight(true);
+	wall($(".contIndex").eq(0)[0]);
+	wall($(".contIndex").eq(1)[0]);
+	wall($(".contIndex").eq(2)[0]);
 	hotScrollL();
-	ajax("1",".contIndex:eq(0)");
+	hotScrollC();
+	hotScrollR();
+//	ajax("1",".contIndex:eq(0)");
+
 });	
 
 function ajax(ind,obj){
@@ -183,8 +275,8 @@ function ajax(ind,obj){
 				var cont = list[i].content;
 				$(
 					'<div class="contBox">'+
-						'<img src='+img+'>'+
-						'<p>'+cont+'</p>'+
+						'<img src="img/contBoxImg.jpg"/>'+
+						'<p>蜡笔小新！蜡笔小新新新！！！！</p>'+
 					'</div>'
 				).appendTo(obj);
 			}
@@ -245,10 +337,29 @@ function hotScrollL(){
 	var down = $(".spinnerOut").eq(1);
 	
 	function upActive(){
-		ajax("1",".contIndex:eq(0)");
+		setTimeout(function(){
+			$(
+				'<div class="contBox">'+
+					'<img src="img/contBoxImg.jpg"/>'+
+					'<p>蜡笔小新！蜡笔小新新新！！！！</p>'+
+				'</div>'
+			).appendTo($(".contIndex").eq(0));
+			wall($(".contIndex").eq(0)[0]);
+			hotLobj.refresh();hotLobj.maxScrollY = hotLobj.maxScrollY + loadingHei;
+		},1000);
 	}
 	function downActive(){
-		ajax("1",".contIndex:eq(0)");
+		setTimeout(function(){
+			$(
+				'<div class="contBox">'+
+					'<img src="img/contBoxImg.jpg"/>'+
+					'<p>蜡笔小新！蜡笔小新新新！！！！</p>'+
+				'</div>'
+			).appendTo($(".contIndex").eq(0));
+			wall($(".contIndex").eq(0)[0]);
+			hotLobj.refresh();hotLobj.maxScrollY = hotLobj.maxScrollY + loadingHei;
+		},1000);
+//		ajax("1",".contIndex:eq(0)");
 	}
 	
 	hotLobj = new iScroll("iScrollLOut",{
@@ -297,7 +408,7 @@ function hotScrollL(){
 			}
 		}
 	});
-//	hotLobj.maxScrollY = hotLobj.maxScrollY + loadingHei;
+	hotLobj.maxScrollY = hotLobj.maxScrollY + loadingHei;
 //	setTimeout(function(){
 //		hotLobj.refresh();
 //		hotLobj.maxScrollY = hotLobj.maxScrollY + loadingHei;
@@ -310,10 +421,28 @@ function hotScrollC(){
 	var down = $(".spinnerOut").eq(3);
 	
 	function upActive(){
-		ajax("2",".contIndex:eq(1)");
+		setTimeout(function(){
+			$(
+				'<div class="contBox">'+
+					'<img src="img/contBoxImg.jpg"/>'+
+					'<p>蜡笔小新！蜡笔小新新新！！！！</p>'+
+				'</div>'
+			).appendTo($(".contIndex").eq(1));
+			wall($(".contIndex").eq(1)[0]);
+			hotCobj.refresh();hotCobj.maxScrollY = hotCobj.maxScrollY + loadingHei;
+		},1000);
 	}
 	function downActive(){
-		ajax("2",".contIndex:eq(1)");
+		setTimeout(function(){
+			$(
+				'<div class="contBox">'+
+					'<img src="img/contBoxImg.jpg"/>'+
+					'<p>蜡笔小新！蜡笔小新新新！！！！</p>'+
+				'</div>'
+			).appendTo($(".contIndex").eq(1));
+			wall($(".contIndex").eq(1)[0]);
+			hotCobj.refresh();hotCobj.maxScrollY = hotCobj.maxScrollY + loadingHei;
+		},1000);
 	}
 	
 	hotCobj = new iScroll("iScrollCOut",{
@@ -361,7 +490,7 @@ function hotScrollC(){
 			}
 		}
 	});
-//	hotCobj.maxScrollY = hotCobj.maxScrollY + loadingHei;
+	hotCobj.maxScrollY = hotCobj.maxScrollY + loadingHei;
 }
 
 function hotScrollR(){
@@ -370,10 +499,28 @@ function hotScrollR(){
 	var down = $(".spinnerOut").eq(5);
 	
 	function upActive(){
-		ajax("3",".contIndex:eq(2)");
+		setTimeout(function(){
+			$(
+				'<div class="contBox">'+
+					'<img src="img/contBoxImg.jpg"/>'+
+					'<p>蜡笔小新！蜡笔小新新新！！！！</p>'+
+				'</div>'
+			).appendTo($(".contIndex").eq(0));
+			wall($(".contIndex").eq(2)[0]);
+			hotRobj.refresh();hotRobj.maxScrollY = hotRobj.maxScrollY + loadingHei;
+		},1000);
 	}
 	function downActive(){
-		ajax("3",".contIndex:eq(2)");
+		setTimeout(function(){
+			$(
+				'<div class="contBox">'+
+					'<img src="img/contBoxImg.jpg"/>'+
+					'<p>蜡笔小新！蜡笔小新新新！！！！</p>'+
+				'</div>'
+			).appendTo($(".contIndex").eq(0));
+			wall($(".contIndex").eq(2)[0]);
+			hotRobj.refresh();hotRobj.maxScrollY = hotRobj.maxScrollY + loadingHei;
+		},1000);
 	}
 	
 	hotRobj = new iScroll("iScrollROut",{
@@ -421,7 +568,7 @@ function hotScrollR(){
 			}
 		}
 	});
-//	hotRobj.maxScrollY = hotRobj.maxScrollY + loadingHei;
+	hotRobj.maxScrollY = hotRobj.maxScrollY + loadingHei;
 }
 
 //窗口改变
@@ -448,54 +595,29 @@ function navClick(){
 		var i = $(this).index();
 		mySwiper.slideTo(i,500,false);
 		$(this).addClass("active").siblings().removeClass("active");
-		if($(".indexSlideL .contIndex").height()<15){
-			console.log(1);
-			proLoading($("#iScrollLIn"));
-			hotScrollL();
-			ajax("1",$(".contIndex:eq(0)"));
-		}else if($(".indexSlideC .contIndex").height()<15){
-			console.log(2);
-			proLoading($("#iScrollCIn"));
-			hotScrollC();
-			ajax("2",$(".contIndex:eq(1)"));
-		}else if($(".indexSlideR .contIndex").height()<15){
-			console.log(3);
-			proLoading($("#iScrollRIn"));
-			hotScrollR();
-			ajax("3",$(".contIndex:eq(2)"));
-		}else{
-			console.log(4);
-			swiperHei();
-			wall($(".contIndex").eq(i)[0]);
-			changeSize(i);
-		}
+//		if($(".indexSlideL .contIndex").height()<15){
+//			console.log(1);
+//			proLoading($("#iScrollLIn"));
+//			hotScrollL();
+//			ajax("1",$(".contIndex:eq(0)"));
+//		}else if($(".indexSlideC .contIndex").height()<15){
+//			console.log(2);
+//			proLoading($("#iScrollCIn"));
+//			hotScrollC();
+//			ajax("2",$(".contIndex:eq(1)"));
+//		}else if($(".indexSlideR .contIndex").height()<15){
+//			console.log(3);
+//			proLoading($("#iScrollRIn"));
+//			hotScrollR();
+//			ajax("3",$(".contIndex:eq(2)"));
+//		}else{
+//			console.log(4);
+//			swiperHei();
+//			wall($(".contIndex").eq(i)[0]);
+//			changeSize(i);
+//		}
 	});
 };
-//导航选择状态
-function navActive(i){
-	$(".nav li").eq(i).addClass("active").siblings().removeClass("active");
-		if($(".indexSlideL .contIndex").height()<15&&i==0){
-			console.log(1);
-			proLoading($("#iScrollLIn"));
-			hotScrollL();
-			ajax("1",$(".contIndex:eq(0)"));
-		}else if($(".indexSlideC .contIndex").height()<15&&i==1){
-			console.log(2);
-			proLoading($("#iScrollCIn"));
-			hotScrollC();
-			ajax("2",$(".contIndex:eq(1)"));
-		}else if($(".indexSlideR .contIndex").height()<15&&i==2){
-			console.log(3);
-			proLoading($("#iScrollRIn"));
-			hotScrollR();
-			ajax("3",$(".contIndex:eq(2)"));
-		}else{
-			console.log(4);
-			swiperHei();
-			wall($(".contIndex").eq(i)[0]);
-			changeSize(i);
-		}
-	}
 //头部切换
 var focusFlag = 1;
 function headToggle(){
@@ -508,19 +630,19 @@ function headToggle(){
 		}else{
 			if(focusFlag){
 				focusFlag = 0;
-				focusScroll();
 			}
 			$(".focus").show();
 			$(".hot").hide();
 			$(this).css({"background":" #79c1df","color":"#fff"});
 			$(this).siblings().css({"background":" #57b2d7","color":"#b1e4f8"});
+			focusScroll();
 		}
 	});
 }
 
 function focusScroll(){
-	swiperHei();
-	proLoading($("#focusScrollIn"));
+//	swiperHei();
+//	proLoading($("#focusScrollIn"));
 	
 	var loadingHei = 35;
 	var up = $("#focusScrollIn .spinnerOut").eq(0);
@@ -530,13 +652,15 @@ function focusScroll(){
 //		ajax("1",".contIndex:eq(0)");
 		setTimeout(function(){
 			focusObj.refresh();
-		},100);
+			focusObj.maxScrollY = focusObj.maxScrollY + loadingHei;
+		},1000);
 	}
 	function downActive(){
 //		ajax("1",".contIndex:eq(0)");
 		setTimeout(function(){
 			focusObj.refresh();
-		},100);
+			focusObj.maxScrollY = focusObj.maxScrollY + loadingHei;
+		},1000);
 	}
 	
 	focusObj = new iScroll("focusScrollOut",{
@@ -584,12 +708,13 @@ function focusScroll(){
 			}
 		}
 	});
-//	focusObj.maxScrollY = focusObj.maxScrollY + loadingHei;
-	showLoading();
-	setTimeout(function(){
-		focusObj.refresh();
-		focusObj.maxScrollY = focusObj.maxScrollY + loadingHei;
-	},10);
+//	showLoading();
+	focusObj.maxScrollY = focusObj.maxScrollY + loadingHei;
+	
+//	setTimeout(function(){
+//		focusObj.refresh();
+//		focusObj.maxScrollY = focusObj.maxScrollY + loadingHei;
+//	},10);
 }
 
 		</script>
