@@ -144,7 +144,7 @@ function loadingFind(obj,text,trig){
 function showLoading(){
 	$(".spinnerOut").show();
 }
-document.addEventListener('touchmove',function (e) { e.preventDefault(); },false);
+//document.addEventListener('touchmove',function (e) { e.preventDefault(); },false);
 
 //瀑布流
 function wall(obj){
